@@ -12,7 +12,7 @@ export interface AdminUser {
 const ADMIN: AdminUser = {
   id: "admin_001",
   name: process.env.ADMIN_NAME ?? "Fund Administrator",
-  email: process.env.ADMIN_EMAIL ?? "admin@elliceinvestmentgroup.com",
+  email: process.env.ADMIN_EMAIL ?? "etekafa@elliceinvestmentgroup.com",
   passwordHash:
     process.env.ADMIN_PASSWORD_HASH ??
     // bcrypt of "Admin@2024"
