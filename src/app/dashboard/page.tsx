@@ -62,7 +62,10 @@ export default function DashboardPage() {
           Welcome back, {investor?.name?.split(" ")[0]}
         </h1>
         <p className="text-gray-500 text-sm mt-1">
-          Account {investor?.accountNumber} · Last updated {new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+          Account {investor?.accountNumber} · Last updated{" "}
+          {(investor as (Investor & { portfolioLastUpdated?: string }))?.portfolioLastUpdated
+            ? new Date((investor as (Investor & { portfolioLastUpdated?: string })).portfolioLastUpdated!).toLocaleString("en-US", { month: "long", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" })
+            : new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
         </p>
       </div>
 

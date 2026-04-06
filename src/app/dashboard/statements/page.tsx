@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import type { Investor, Statement } from "@/lib/investors";
 
 function fmt(n: number) {
@@ -9,82 +9,6 @@ function pct(n: number) {
   return `${n >= 0 ? "+" : ""}${n.toFixed(2)}%`;
 }
 
-function PrintStatement({ investor, s }: { investor: Investor; s: Statement }) {
-  const pos = s.returnPercent >= 0;
-  return (
-    <div className="letterhead-container bg-white mx-auto my-8">
-      {/* Header */}
-      <div className="flex items-start justify-between mb-8">
-        <img src="/logo.svg" alt="Ellice Investment Group" style={{ height: 56, width: "auto" }} />
-        <div className="text-right">
-          <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">Account Statement</p>
-          <p className="text-sm font-semibold text-gray-800">{s.period}</p>
-          <p className="text-xs text-gray-500">{new Date(s.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</p>
-        </div>
-      </div>
-
-      {/* Investor info */}
-      <div className="mb-8 p-5 rounded-lg" style={{ background: "#f8f7f4" }}>
-        <div className="grid grid-cols-2 gap-4">
-          <div>
-            <p className="text-xs text-gray-400 mb-0.5">Investor Name</p>
-            <p className="font-semibold text-gray-900">{investor.name}</p>
-          </div>
-          <div>
-            <p className="text-xs text-gray-400 mb-0.5">Account Number</p>
-            <p className="font-semibold text-gray-900">{investor.accountNumber}</p>
-          </div>
-          <div>
-            <p className="text-xs text-gray-400 mb-0.5">Email</p>
-            <p className="text-gray-700">{investor.email}</p>
-          </div>
-          <div>
-            <p className="text-xs text-gray-400 mb-0.5">Fund Allocation</p>
-            <p className="text-gray-700">{investor.fundAllocationPercent}%</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Statement summary */}
-      <h2 className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: "var(--ellice-green)" }}>
-        Account Activity — {s.period}
-      </h2>
-      <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
-        <tbody>
-          {[
-            ["Opening Balance", fmt(s.openingBalance)],
-            ["Contributions", `+${fmt(s.contributions)}`],
-            ["Withdrawals", `-${fmt(s.withdrawals)}`],
-            ["Investment Gain / Loss", `${s.gainLoss >= 0 ? "+" : ""}${fmt(s.gainLoss)}`],
-            ["Closing Balance", fmt(s.closingBalance)],
-          ].map(([label, value], i) => (
-            <tr key={label} style={{ borderTop: "1px solid #eee", background: i === 4 ? "#f8f7f4" : "white" }}>
-              <td style={{ padding: "12px 0", color: "#555" }}>{label}</td>
-              <td style={{ padding: "12px 0", textAlign: "right", fontWeight: i === 4 ? 700 : 500, color: "#111" }}>{value}</td>
-            </tr>
-          ))}
-          <tr style={{ borderTop: "2px solid var(--ellice-green)" }}>
-            <td style={{ padding: "12px 0", color: "#555" }}>Period Return</td>
-            <td style={{ padding: "12px 0", textAlign: "right", fontWeight: 700, color: pos ? "#059669" : "#dc2626" }}>
-              {pct(s.returnPercent)}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div className="letterhead-footer">
-        <div>
-          <p className="font-semibold" style={{ color: "var(--ellice-green)" }}>Ellice Investment Group</p>
-          <p>support@elliceinvestmentgroup.com</p>
-        </div>
-        <div className="text-right">
-          <p>All figures in USD. Past performance is not indicative of future results.</p>
-          <p>This statement is for informational purposes only.</p>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function StatementRow({ s, expanded, onToggle, investor }: { s: Statement; expanded: boolean; onToggle: () => void; investor: Investor }) {
   const pos = s.returnPercent >= 0;
@@ -112,7 +36,7 @@ function StatementRow({ s, expanded, onToggle, investor }: { s: Statement; expan
               {pct(s.returnPercent)}
             </span>
             <button
-              onClick={(e) => { e.stopPropagation(); investor && printStatement(investor, s); }}
+              onClick={(e) => { e.stopPropagation(); openPrintStatement(s); }}
               className="text-xs text-gray-400 hover:text-gray-700 transition no-print"
               title="Print statement"
             >
@@ -163,28 +87,8 @@ function StatementRow({ s, expanded, onToggle, investor }: { s: Statement; expan
   );
 }
 
-function printStatement(investor: Investor, s: Statement) {
-  const win = window.open("", "_blank");
-  if (!win) return;
-  win.document.write(`<!DOCTYPE html><html><head>
-    <title>Statement – ${investor.name} – ${s.period}</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <style>
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      body { font-family: 'Inter', sans-serif; background: white; }
-      :root { --ellice-green: #2D5A43; --ellice-gold: #D4AF37; }
-      .letterhead-container { width: 100%; max-width: 800px; border-top: 8px solid var(--ellice-green); padding: 40px; margin: 0 auto; }
-      .letterhead-footer { margin-top: 50px; border-top: 1px solid #EEE; padding-top: 20px; font-size: 12px; color: #666; display: flex; justify-content: space-between; }
-    </style>
-  </head><body id="root"></body></html>`);
-  win.document.close();
-
-  // Dynamically render the PrintStatement component into the popup
-  const { createRoot } = require("react-dom/client");
-  const React = require("react");
-  const root = createRoot(win.document.getElementById("root"));
-  root.render(React.createElement(PrintStatement, { investor, s }));
-  setTimeout(() => win.print(), 600);
+function openPrintStatement(s: Statement) {
+  window.open(`/dashboard/statements/print?id=${s.id}`, "_blank");
 }
 
 export default function StatementsPage() {
