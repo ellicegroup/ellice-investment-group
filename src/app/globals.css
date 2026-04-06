@@ -3,6 +3,33 @@
 :root {
   --background: #f8f7f4;
   --foreground: #1a1a1a;
+  --ellice-green: #2D5A43;
+  --ellice-gold: #D4AF37;
+}
+
+/* Letterhead / print statement styles */
+.letterhead-container {
+  width: 100%;
+  max-width: 800px;
+  border-top: 8px solid var(--ellice-green);
+  padding: 40px;
+  font-family: 'Inter', sans-serif;
+}
+
+.letterhead-footer {
+  margin-top: 50px;
+  border-top: 1px solid #EEE;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white !important; }
+  .letterhead-container { padding: 20px; }
 }
 
 body {

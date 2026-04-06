@@ -32,11 +32,8 @@ export default function LoginPage() {
     <div className="min-h-screen flex flex-col" style={{ background: "linear-gradient(135deg, #0d1b2a 0%, #1b2e45 50%, #0d1b2a 100%)" }}>
       {/* Top bar */}
       <div className="border-b border-white/10 px-8 py-4">
-        <div className="max-w-7xl mx-auto flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: "linear-gradient(135deg, #c9a84c, #f0d080)" }}>
-            <span className="text-[#0d1b2a] font-bold text-sm">E</span>
-          </div>
-          <span className="text-white font-semibold tracking-wide text-sm uppercase">Ellice Investment Group</span>
+        <div className="max-w-7xl mx-auto">
+          <img src="/logo.svg" alt="Ellice Investment Group" className="h-9 w-auto brightness-0 invert" />
         </div>
       </div>
 
@@ -47,17 +44,13 @@ export default function LoginPage() {
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
             {/* Card header */}
             <div className="px-8 pt-10 pb-8 text-center" style={{ background: "linear-gradient(135deg, #0d1b2a 0%, #1b3a5c 100%)" }}>
-              <div className="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ background: "linear-gradient(135deg, #c9a84c, #f0d080)" }}>
-                <span className="text-[#0d1b2a] font-bold text-2xl">E</span>
-              </div>
+              <img src="/logo.svg" alt="Ellice Investment Group" className="h-12 w-auto mx-auto mb-5 brightness-0 invert" />
               <h1 className="text-white text-2xl font-semibold tracking-tight">Investor Portal</h1>
-              <p className="text-white/60 text-sm mt-1">Ellice Investment Group</p>
+              <p className="text-white/60 text-sm mt-1">Sign in to access your account</p>
             </div>
 
             {/* Form */}
             <div className="px-8 py-8">
-              <p className="text-gray-500 text-sm text-center mb-6">Sign in to access your account</p>
-
               {error && (
                 <div className="mb-4 px-4 py-3 bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg">
                   {error}

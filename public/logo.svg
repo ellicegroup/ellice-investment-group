@@ -1,0 +1,7 @@
+<svg width="250" height="100" viewBox="0 0 250 100" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 70 V30 H60 M20 50 H50" stroke="#2D5A43" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M15 65 Q40 60 70 20 L60 20 M70 20 L72 32" stroke="#D4AF37" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+  <text x="85" y="55" font-family="Montserrat, sans-serif" font-weight="700" font-size="32" fill="#2D5A43">ELLICE</text>
+  <text x="85" y="75" font-family="Inter, sans-serif" font-size="10" letter-spacing="3" fill="#1A1A1A">INVESTMENT GROUP</text>
+</svg>

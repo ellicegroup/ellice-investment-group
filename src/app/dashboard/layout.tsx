@@ -32,16 +32,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       {/* Sidebar */}
       <aside className="w-64 flex flex-col flex-shrink-0" style={{ background: "linear-gradient(180deg, #0d1b2a 0%, #1b3a5c 100%)" }}>
         {/* Logo */}
-        <div className="px-6 py-6 border-b border-white/10">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #c9a84c, #f0d080)" }}>
-              <span className="text-[#0d1b2a] font-bold text-base">E</span>
-            </div>
-            <div>
-              <p className="text-white font-semibold text-sm leading-none">Ellice</p>
-              <p className="text-white/50 text-xs mt-0.5">Investment Group</p>
-            </div>
-          </div>
+        <div className="px-6 py-5 border-b border-white/10">
+          <img src="/logo.svg" alt="Ellice Investment Group" className="h-10 w-auto brightness-0 invert" />
         </div>
 
         {/* Nav */}
