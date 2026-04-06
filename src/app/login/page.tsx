@@ -31,8 +31,11 @@ export default function LoginPage() {
     <div className="min-h-screen flex flex-col" style={{ background: "linear-gradient(135deg, #0d1b2a 0%, #1b2e45 50%, #0d1b2a 100%)" }}>
       {/* Top bar */}
       <div className="border-b border-white/10 px-8 py-4">
-        <div className="max-w-7xl mx-auto">
-          <img src="/logo.svg" alt="Ellice Investment Group" className="h-9 w-auto brightness-0 invert" />
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <a href="/">
+            <img src="/logo.svg" alt="Ellice Investment Group" className="h-9 w-auto brightness-0 invert" />
+          </a>
+          <a href="/" style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", textDecoration: "none" }}>← Back to website</a>
         </div>
       </div>
 
