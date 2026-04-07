@@ -7,7 +7,7 @@ export default function PublicFooter() {
         {/* Brand */}
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="Ellice Investment Group" style={{ height: 44, width: "auto", filter: "brightness(0) invert(1)", marginBottom: 16 }} />
+          <img src="/logo-white.svg" alt="Ellice Investment Group" style={{ height: 44, width: "auto", marginBottom: 16 }} />
           <p style={{ fontSize: 13, lineHeight: 1.7, maxWidth: 280 }}>
             A Pacific-focused private investment fund committed to disciplined, long-term wealth creation for our investors.
           </p>

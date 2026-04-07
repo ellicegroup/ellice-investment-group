@@ -39,11 +39,11 @@ export default async function HomePage() {
           {/* Logo — large, centered, prominent */}
           <div style={{ display: "flex", justifyContent: "center", marginBottom: 48 }}>
             <Image
-              src="/logo.svg"
+              src="/logo-white.svg"
               alt="Ellice Investment Group"
               width={320}
               height={80}
-              style={{ filter: "brightness(0) invert(1)", display: "block" }}
+              style={{ display: "block" }}
               priority
             />
           </div>

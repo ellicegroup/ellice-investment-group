@@ -21,7 +21,7 @@ export default function PublicNav() {
         {/* Logo */}
         <Link href="/" style={{ textDecoration: "none", flexShrink: 0 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="Ellice Investment Group" style={{ height: 40, width: "auto", filter: "brightness(0) invert(1)" }} />
+          <img src="/logo-white.svg" alt="Ellice Investment Group" style={{ height: 40, width: "auto" }} />
         </Link>
 
         {/* Desktop links */}
