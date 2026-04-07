@@ -128,10 +128,10 @@ export default async function HomePage() {
               Our Funds
             </p>
             <h2 style={{ fontFamily: "Georgia, serif", fontSize: 26, fontWeight: 700, color: "#0d0b1a", margin: "0 0 6px" }}>
-              Two Funds. One Mandate.
+              Fewer Positions. Deeper Conviction.
             </h2>
             <p style={{ fontSize: 12, color: "#888", margin: 0, fontFamily: "-apple-system, Arial, sans-serif" }}>
-              Disciplined investment management across global equities and Pacific markets.
+              Two funds built on concentrated, thesis-driven investing — bringing institutional discipline to Pacific investors and beyond.
             </p>
           </div>
 
