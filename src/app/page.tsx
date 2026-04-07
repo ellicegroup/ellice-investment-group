@@ -190,9 +190,12 @@ export default async function HomePage() {
             <p style={{ fontSize: 9, fontWeight: 600, textTransform: "uppercase", letterSpacing: 3, color: "#534AB7", margin: "0 0 8px", fontFamily: "-apple-system, Arial, sans-serif" }}>
               Why Ellice
             </p>
-            <h2 style={{ fontFamily: "Georgia, serif", fontSize: 26, fontWeight: 700, color: "#0d0b1a", margin: 0 }}>
-              What Sets Us Apart
+            <h2 style={{ fontFamily: "Georgia, serif", fontSize: 26, fontWeight: 700, color: "#0d0b1a", margin: "0 0 6px" }}>
+              Pacific Heart. Institutional Edge.
             </h2>
+            <p style={{ fontSize: 12, color: "#888", margin: 0, fontFamily: "-apple-system, Arial, sans-serif" }}>
+              We combine the rigour of institutional investment management with a deep commitment to Pacific communities — because where you invest should reflect what you believe.
+            </p>
           </div>
 
           <div className="why-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
