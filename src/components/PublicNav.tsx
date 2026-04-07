@@ -13,18 +13,23 @@ const LINKS = [
 
 function LogoFull() {
   return (
-    <svg viewBox="0 0 320 52" width="320" height="52" xmlns="http://www.w3.org/2000/svg" aria-label="Ellice Capital">
+    <svg viewBox="0 0 355 52" width="355" height="52" xmlns="http://www.w3.org/2000/svg" aria-label="Ellice Capital">
+      {/* Hex mark */}
       <g transform="translate(26,26)">
         <polygon points="0,-23 20,-11.5 20,11.5 0,23 -20,11.5 -20,-11.5" fill="#534AB7" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" />
         <polygon points="0,-16 14,-8 14,8 0,16 -14,8 -14,-8" fill="none" stroke="rgba(255,255,255,0.18)" strokeWidth="0.8" />
         <text x="0" y="6" textAnchor="middle" fontFamily="Georgia, serif" fontSize="14" fontWeight="700" fill="#EF9F27" letterSpacing="1">EC</text>
       </g>
-      <text x="60" y="23" fontFamily="Georgia, serif" fontSize="22" fontWeight="700" letterSpacing="7" fill="white">ELLICE</text>
-      <text x="61" y="38" fontFamily="-apple-system, Arial, sans-serif" fontSize="9" letterSpacing="2.5" fill="rgba(255,255,255,0.65)">CAPITAL · INVESTMENT GROUP</text>
-      <line x1="204" y1="8" x2="204" y2="44" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
-      <text x="214" y="20" fontFamily="Georgia, serif" fontSize="9.5" letterSpacing="0.5" fill="rgba(255,255,255,0.65)">Pacific</text>
-      <text x="214" y="32" fontFamily="Georgia, serif" fontSize="9.5" letterSpacing="0.5" fill="rgba(255,255,255,0.65)">Sovereign</text>
-      <text x="214" y="44" fontFamily="Georgia, serif" fontSize="9.5" letterSpacing="0.5" fill="rgba(255,255,255,0.65)">Capital</text>
+      {/* ELLICE wordmark */}
+      <text x="60" y="24" fontFamily="Georgia, serif" fontSize="22" fontWeight="700" letterSpacing="7" fill="white">ELLICE</text>
+      {/* Subtitle — tighter letter-spacing so it fits left of the divider */}
+      <text x="61" y="39" fontFamily="-apple-system, Arial, sans-serif" fontSize="8.5" letterSpacing="1.8" fill="rgba(255,255,255,0.6)">CAPITAL  ·  INVESTMENT GROUP</text>
+      {/* Vertical divider */}
+      <line x1="262" y1="8" x2="262" y2="44" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+      {/* Pacific Sovereign Capital tagline */}
+      <text x="273" y="20" fontFamily="Georgia, serif" fontSize="9.5" letterSpacing="0.5" fill="rgba(255,255,255,0.7)">Pacific</text>
+      <text x="273" y="32" fontFamily="Georgia, serif" fontSize="9.5" letterSpacing="0.5" fill="rgba(255,255,255,0.7)">Sovereign</text>
+      <text x="273" y="44" fontFamily="Georgia, serif" fontSize="9.5" letterSpacing="0.5" fill="rgba(255,255,255,0.7)">Capital</text>
     </svg>
   );
 }
