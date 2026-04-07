@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import PublicNav from "@/components/PublicNav";
 import PublicFooter from "@/components/PublicFooter";
 import { getFundMetrics } from "@/lib/metricsSheets";
@@ -8,220 +7,302 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Ellice Investment Group — Pacific-Focused Investment Management",
   description:
-    "Ellice Investment Group manages two private funds delivering institutional-grade returns for investors across the Pacific and beyond.",
+    "Ellice Capital manages two private funds delivering institutional-grade returns for investors across the Pacific and beyond.",
 };
 
 export const revalidate = 300;
+
+// ── Inline hero logo (larger version, 340×58) ─────────────────────────────
+function LogoHero() {
+  return (
+    <svg viewBox="0 0 280 48" width="340" height="58" xmlns="http://www.w3.org/2000/svg" aria-label="Ellice Capital">
+      <g transform="translate(24,24)">
+        <polygon points="0,-21 18,-10.5 18,10.5 0,21 -18,10.5 -18,-10.5" fill="#534AB7" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" />
+        <polygon points="0,-15 13,-7.5 13,7.5 0,15 -13,7.5 -13,-7.5" fill="none" stroke="rgba(255,255,255,0.18)" strokeWidth="0.8" />
+        <text x="0" y="6" textAnchor="middle" fontFamily="Georgia, serif" fontSize="13" fontWeight="700" fill="#EF9F27" letterSpacing="1">EC</text>
+      </g>
+      <text x="56" y="22" fontFamily="Georgia, serif" fontSize="22" fontWeight="700" letterSpacing="7" fill="white">ELLICE</text>
+      <text x="57" y="36" fontFamily="-apple-system, Arial, sans-serif" fontSize="8" letterSpacing="3" fill="rgba(255,255,255,0.4)">CAPITAL · INVESTMENT GROUP</text>
+      <line x1="196" y1="10" x2="196" y2="38" stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
+      <text x="206" y="20" fontFamily="Georgia, serif" fontSize="8" letterSpacing="0.5" fill="rgba(255,255,255,0.35)">Pacific</text>
+      <text x="206" y="30" fontFamily="Georgia, serif" fontSize="8" letterSpacing="0.5" fill="rgba(255,255,255,0.35)">Sovereign</text>
+      <text x="206" y="40" fontFamily="Georgia, serif" fontSize="8" letterSpacing="0.5" fill="rgba(255,255,255,0.35)">Capital</text>
+    </svg>
+  );
+}
 
 export default async function HomePage() {
   const metrics = await getFundMetrics();
 
   const STATS = [
-    { label: "Fund I IRR",        value: metrics.fund1Irr,       note: "Since inception (2022)", highlight: true  },
-    { label: "Fund I 2025 Return",value: metrics.fund1ReturnYtd, note: "Full year 2025",          highlight: true  },
-    { label: "S&P 500 2025",      value: metrics.sp500ReturnYtd, note: "Benchmark comparison",    highlight: false },
-    { label: "Active Investors",  value: String(metrics.activeInvestors), note: "Across both funds", highlight: false },
+    { label: "FUND I IRR",         value: metrics.fund1Irr,                    teal: false },
+    { label: "FUND I 2025",        value: metrics.fund1ReturnYtd,              teal: true  },
+    { label: "S&P 500 2025",       value: metrics.sp500ReturnYtd,              teal: false },
+    { label: "ACTIVE INVESTORS",   value: String(metrics.activeInvestors),     teal: true  },
   ];
 
   return (
-    <div style={{ fontFamily: "Inter, -apple-system, sans-serif", color: "#1a1a1a", background: "#fff" }}>
+    <div style={{ fontFamily: "-apple-system, Arial, sans-serif", color: "#1a1a1a" }}>
       <PublicNav />
 
-      {/* ── Hero ── */}
-      <section style={{
-        background: "linear-gradient(160deg, #13175c 0%, #2d2a8a 55%, #1a1760 100%)",
-        color: "white",
-        padding: "88px 32px 108px",
-        textAlign: "center",
-      }}>
-        <div style={{ maxWidth: 860, margin: "0 auto" }}>
+      {/* ── Hero ──────────────────────────────────────────────── */}
+      <section style={{ background: "#0d0b1a", padding: "64px 48px 56px", color: "white" }}>
+        <div className="hero-grid" style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 420px", gap: 48, alignItems: "center" }}>
 
-          {/* Logo — large, centered, prominent */}
-          <div style={{ display: "flex", justifyContent: "center", marginBottom: 48 }}>
-            <Image
-              src="/logo-white.svg"
-              alt="Ellice Investment Group"
-              width={320}
-              height={80}
-              style={{ display: "block" }}
-              priority
-            />
-          </div>
+          {/* LEFT: text content */}
+          <div>
+            <div style={{ marginBottom: 28 }}>
+              <LogoHero />
+            </div>
 
-          <div style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 8,
-            background: "rgba(212,175,55,0.12)",
-            border: "1px solid rgba(212,175,55,0.35)",
-            borderRadius: 100,
-            padding: "6px 18px",
-            marginBottom: 32,
-          }}>
-            <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#D4AF37", flexShrink: 0 }} />
-            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 2.5, color: "#D4AF37", textTransform: "uppercase" }}>
-              Two Funds Under Management
-            </span>
-          </div>
-
-          <h1 style={{
-            fontSize: "clamp(34px, 5vw, 58px)",
-            fontWeight: 700,
-            lineHeight: 1.13,
-            margin: "0 0 22px",
-            letterSpacing: -0.5,
-          }}>
-            Pacific-Focused Investment<br />
-            <span style={{ color: "#D4AF37" }}>Built for the Long Term</span>
-          </h1>
-
-          <p style={{
-            fontSize: 17,
-            color: "rgba(255,255,255,0.6)",
-            lineHeight: 1.75,
-            maxWidth: 560,
-            margin: "0 auto 48px",
-          }}>
-            Ellice Investment Group manages Ellice Growth Fund I and II — delivering
-            institutional-grade returns for Pacific investors and beyond.
-          </p>
-
-          <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/login" style={{
-              padding: "13px 30px", borderRadius: 8, fontWeight: 700, fontSize: 14,
-              background: "linear-gradient(135deg, #c9a84c, #e8cd6a)",
-              color: "#13175c", textDecoration: "none", letterSpacing: 0.2,
+            {/* Eyebrow pill */}
+            <div style={{
+              display: "inline-flex", alignItems: "center", gap: 8,
+              background: "rgba(83,74,183,0.2)", border: "0.5px solid rgba(83,74,183,0.4)",
+              borderRadius: 2, padding: "5px 12px", marginBottom: 24,
             }}>
-              Investor Portal →
-            </Link>
-            <Link href="/about" style={{
-              padding: "13px 30px", borderRadius: 8, fontWeight: 600, fontSize: 14,
-              background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)",
-              textDecoration: "none", border: "1px solid rgba(255,255,255,0.12)",
-            }}>
-              About Us
-            </Link>
-          </div>
-        </div>
-      </section>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#1D9E75", flexShrink: 0, display: "inline-block" }} />
+              <span style={{ fontSize: 9, fontWeight: 600, letterSpacing: 2, color: "#AFA9EC", textTransform: "uppercase", fontFamily: "-apple-system, Arial, sans-serif" }}>
+                Two Funds Under Management
+              </span>
+            </div>
 
-      {/* ── Live Metrics ── */}
-      <section style={{ background: "#f5f4f8", padding: "56px 32px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
-            <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#888", margin: 0 }}>
-              Fund Performance
+            {/* H1 */}
+            <h1 style={{ fontFamily: "Georgia, serif", fontSize: "clamp(30px, 3.5vw, 42px)", fontWeight: 700, lineHeight: 1.2, margin: "0 0 18px", color: "white" }}>
+              Where Pacific Roots Meet{" "}
+              <span style={{ color: "#AFA9EC" }}>Institutional</span> Returns.
+            </h1>
+
+            {/* Subtext */}
+            <p style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", lineHeight: 1.7, maxWidth: 420, margin: "0 0 32px" }}>
+              Ellice Capital manages two closed-end funds delivering disciplined, long-term growth
+              for Pacific investors — with the rigour of institutional asset management.
             </p>
-            <p style={{ fontSize: 11, color: "#aaa", margin: 0 }}>
-              Live · Updated {new Date(metrics.lastUpdated).toLocaleDateString("en-NZ", { day: "numeric", month: "short", year: "numeric" })}
-            </p>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))", gap: 16 }}>
-            {STATS.map(({ label, value, note, highlight }) => (
-              <div key={label} style={{
-                background: "white", borderRadius: 14, padding: "28px 24px",
-                border: highlight ? "1px solid rgba(83,74,183,0.2)" : "1px solid #e8e8e8",
-                borderTop: highlight ? "3px solid #534AB7" : "3px solid #e8e8e8",
+
+            {/* Buttons */}
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <Link href="/login" style={{
+                padding: "10px 20px", borderRadius: 4, fontWeight: 600, fontSize: 11,
+                background: "#534AB7", color: "white", textDecoration: "none",
+                fontFamily: "-apple-system, Arial, sans-serif", letterSpacing: 0.3,
               }}>
-                <p style={{ fontSize: 38, fontWeight: 700, color: highlight ? "#534AB7" : "#1a1a1a", margin: "0 0 6px", letterSpacing: -1 }}>
-                  {value}
-                </p>
-                <p style={{ fontSize: 13, fontWeight: 600, color: "#222", margin: "0 0 3px" }}>{label}</p>
-                <p style={{ fontSize: 11, color: "#999", margin: 0 }}>{note}</p>
-              </div>
-            ))}
+                Investor Portal →
+              </Link>
+              <Link href="/about" style={{
+                padding: "10px 20px", borderRadius: 4, fontWeight: 600, fontSize: 11,
+                border: "0.5px solid rgba(255,255,255,0.25)", color: "white", textDecoration: "none",
+                fontFamily: "-apple-system, Arial, sans-serif", letterSpacing: 0.3,
+              }}>
+                Our Approach
+              </Link>
+            </div>
+          </div>
+
+          {/* RIGHT: live stats panel */}
+          <div style={{
+            background: "rgba(255,255,255,0.04)", border: "0.5px solid rgba(255,255,255,0.08)",
+            borderRadius: 8, padding: 24,
+          }}>
+            {/* Live indicator */}
+            <div style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: 20 }}>
+              <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#1D9E75", display: "inline-block" }} />
+              <span style={{ fontSize: 9, letterSpacing: 1, color: "rgba(255,255,255,0.35)", fontFamily: "-apple-system, Arial, sans-serif", textTransform: "uppercase" }}>
+                Live · {new Date(metrics.lastUpdated).toLocaleDateString("en-NZ", { day: "numeric", month: "short", year: "numeric" }).toUpperCase()}
+              </span>
+            </div>
+
+            {/* 2×2 stats grid */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0 }}>
+              {STATS.map(({ label, value, teal }, i) => {
+                const isBottomRow = i >= 2;
+                const isRightCol = i % 2 === 1;
+                return (
+                  <div key={label} style={{
+                    padding: "16px 16px",
+                    borderBottom: isBottomRow ? "none" : "0.5px solid rgba(255,255,255,0.06)",
+                    borderRight: isRightCol ? "none" : "0.5px solid rgba(255,255,255,0.06)",
+                  }}>
+                    <p style={{
+                      fontFamily: "Georgia, serif", fontSize: 24, fontWeight: 700,
+                      color: teal ? "#1D9E75" : "white",
+                      margin: "0 0 4px", lineHeight: 1,
+                    }}>
+                      {value}
+                    </p>
+                    <p style={{ fontSize: 9, color: "rgba(255,255,255,0.4)", letterSpacing: 1, textTransform: "uppercase", margin: 0, fontFamily: "-apple-system, Arial, sans-serif" }}>
+                      {label}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── Two Funds ── */}
-      <section style={{ padding: "80px 32px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 12 }}>Our Funds</p>
-            <h2 style={{ fontSize: 32, fontWeight: 700, color: "#13175c", margin: "0 0 14px" }}>Two Funds. One Mandate.</h2>
-            <p style={{ fontSize: 15, color: "#666", maxWidth: 520, margin: "0 auto" }}>
+      {/* ── Gradient divider ──────────────────────────────────── */}
+      <div style={{ height: 2, background: "linear-gradient(90deg, #534AB7 0%, #1D9E75 100%)" }} />
+
+      {/* ── Fund Cards ────────────────────────────────────────── */}
+      <section style={{ background: "#f5f4f9", padding: "48px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ marginBottom: 28 }}>
+            <p style={{ fontSize: 9, fontWeight: 600, textTransform: "uppercase", letterSpacing: 3, color: "#534AB7", margin: "0 0 8px", fontFamily: "-apple-system, Arial, sans-serif" }}>
+              Our Funds
+            </p>
+            <h2 style={{ fontFamily: "Georgia, serif", fontSize: 26, fontWeight: 700, color: "#0d0b1a", margin: "0 0 6px" }}>
+              Two Funds. One Mandate.
+            </h2>
+            <p style={{ fontSize: 12, color: "#888", margin: 0, fontFamily: "-apple-system, Arial, sans-serif" }}>
               Disciplined investment management across global equities and Pacific markets.
             </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
-            {[
-              { name: "Ellice Growth Fund I",  status: "Closed", statusColor: "#D4AF37", irr: metrics.fund1Irr,       since: "2022", desc: "Our flagship fund established in 2022, investing across global equities, Pacific markets, and fixed income for long-term wealth creation." },
-              { name: "Ellice Growth Fund II", status: "Active", statusColor: "#7B74D4", irr: metrics.fund2ReturnYtd, since: "2024", desc: "Our second fund continues the disciplined investment approach of Fund I, with an expanded focus on high-conviction equity positions." },
-            ].map((fund) => (
-              <div key={fund.name} style={{ background: "white", borderRadius: 18, border: "1px solid #ebebeb", overflow: "hidden", boxShadow: "0 2px 16px rgba(0,0,0,0.04)" }}>
-                <div style={{ background: "linear-gradient(135deg, #13175c, #2d2a8a)", padding: "28px 28px 24px" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16 }}>
-                    <h3 style={{ fontSize: 18, fontWeight: 700, color: "white", margin: 0, lineHeight: 1.3 }}>{fund.name}</h3>
-                    <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: fund.statusColor, background: `${fund.statusColor}22`, border: `1px solid ${fund.statusColor}55`, borderRadius: 100, padding: "3px 10px", flexShrink: 0, marginLeft: 12 }}>
-                      {fund.status}
-                    </span>
-                  </div>
-                  <div style={{ display: "flex", gap: 24 }}>
-                    <div>
-                      <p style={{ fontSize: 26, fontWeight: 700, color: "#D4AF37", margin: "0 0 2px" }}>{fund.irr}</p>
-                      <p style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", margin: 0 }}>IRR / 2025 Return</p>
-                    </div>
-                    <div style={{ borderLeft: "1px solid rgba(255,255,255,0.1)", paddingLeft: 24 }}>
-                      <p style={{ fontSize: 26, fontWeight: 700, color: "white", margin: "0 0 2px" }}>{fund.since}</p>
-                      <p style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", margin: 0 }}>Inception</p>
-                    </div>
-                  </div>
+
+          <div className="fund-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+            {/* Fund I */}
+            <div style={{ background: "white", border: "0.5px solid #e0dff5", borderRadius: 10, borderTop: "3px solid #534AB7", overflow: "hidden" }}>
+              <div style={{ padding: 24 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 14 }}>
+                  <h3 style={{ fontFamily: "Georgia, serif", fontSize: 15, fontWeight: 700, color: "#0d0b1a", margin: 0 }}>Ellice Growth Fund I</h3>
+                  <span style={{ fontSize: 9, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", background: "#EEEDFE", color: "#3C3489", borderRadius: 2, padding: "3px 8px", flexShrink: 0, marginLeft: 10, fontFamily: "-apple-system, Arial, sans-serif" }}>
+                    Closed
+                  </span>
                 </div>
-                <div style={{ padding: "24px 28px 28px" }}>
-                  <p style={{ fontSize: 14, color: "#555", lineHeight: 1.75, margin: "0 0 20px" }}>{fund.desc}</p>
-                  <Link href="/login" style={{ fontSize: 13, fontWeight: 600, color: "#534AB7", textDecoration: "none" }}>
-                    Investor Access →
-                  </Link>
-                </div>
+                <p style={{ fontFamily: "Georgia, serif", fontSize: 28, fontWeight: 700, color: "#534AB7", margin: "0 0 4px" }}>{metrics.fund1Irr}</p>
+                <p style={{ fontSize: 10, color: "#999", margin: "0 0 14px", fontFamily: "-apple-system, Arial, sans-serif" }}>IRR since inception · Est. 2022</p>
+                <p style={{ fontSize: 11, color: "#444", lineHeight: 1.6, margin: "0 0 18px", fontFamily: "-apple-system, Arial, sans-serif" }}>
+                  Our flagship fund established in 2022, investing across global equities, Pacific markets, and fixed income for long-term wealth creation.
+                </p>
               </div>
-            ))}
+              <div style={{ borderTop: "0.5px solid #f0effe", padding: "14px 24px" }}>
+                <Link href="/login" style={{ fontSize: 11, fontWeight: 600, color: "#534AB7", textDecoration: "none", fontFamily: "-apple-system, Arial, sans-serif" }}>
+                  Investor Access →
+                </Link>
+              </div>
+            </div>
+
+            {/* Fund II */}
+            <div style={{ background: "white", border: "0.5px solid #e0dff5", borderRadius: 10, borderTop: "3px solid #1D9E75", overflow: "hidden" }}>
+              <div style={{ padding: 24 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 14 }}>
+                  <h3 style={{ fontFamily: "Georgia, serif", fontSize: 15, fontWeight: 700, color: "#0d0b1a", margin: 0 }}>Ellice Growth Fund II</h3>
+                  <span style={{ fontSize: 9, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", background: "#E1F5EE", color: "#085041", borderRadius: 2, padding: "3px 8px", flexShrink: 0, marginLeft: 10, fontFamily: "-apple-system, Arial, sans-serif" }}>
+                    Active
+                  </span>
+                </div>
+                <p style={{ fontFamily: "Georgia, serif", fontSize: 28, fontWeight: 700, color: "#0F6E56", margin: "0 0 4px" }}>{metrics.fund2ReturnYtd}</p>
+                <p style={{ fontSize: 10, color: "#999", margin: "0 0 14px", fontFamily: "-apple-system, Arial, sans-serif" }}>2025 YTD return · Est. 2024</p>
+                <p style={{ fontSize: 11, color: "#444", lineHeight: 1.6, margin: "0 0 18px", fontFamily: "-apple-system, Arial, sans-serif" }}>
+                  Our second fund continues the disciplined investment approach of Fund I, with an expanded focus on high-conviction equity positions across Pacific markets.
+                </p>
+              </div>
+              <div style={{ borderTop: "0.5px solid #e1f5ee", padding: "14px 24px" }}>
+                <Link href="/login" style={{ fontSize: 11, fontWeight: 600, color: "#0F6E56", textDecoration: "none", fontFamily: "-apple-system, Arial, sans-serif" }}>
+                  Investor Access →
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── Why Ellice ── */}
-      <section style={{ background: "#f5f4f8", padding: "80px 32px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 52 }}>
-            <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 12 }}>Why Ellice</p>
-            <h2 style={{ fontSize: 32, fontWeight: 700, color: "#13175c", margin: 0 }}>What Sets Us Apart</h2>
+      {/* ── Why Ellice ────────────────────────────────────────── */}
+      <section style={{ background: "white", padding: "48px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ marginBottom: 28 }}>
+            <p style={{ fontSize: 9, fontWeight: 600, textTransform: "uppercase", letterSpacing: 3, color: "#534AB7", margin: "0 0 8px", fontFamily: "-apple-system, Arial, sans-serif" }}>
+              Why Ellice
+            </p>
+            <h2 style={{ fontFamily: "Georgia, serif", fontSize: 26, fontWeight: 700, color: "#0d0b1a", margin: 0 }}>
+              What Sets Us Apart
+            </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
-            {[
-              { icon: "◈", title: "Disciplined Process",  body: "A rigorous, research-driven investment framework focused on long-term value creation across Pacific markets and global equities." },
-              { icon: "◻", title: "Full Transparency",    body: "Every investor has real-time access to their account, portfolio performance, and quarterly statements through our secure portal." },
-              { icon: "≡", title: "Pacific Roots",        body: "Founded by and for Pacific people — bringing institutional-grade investment management to communities across New Zealand, Australia, and the region." },
-            ].map(({ icon, title, body }) => (
-              <div key={title} style={{ background: "white", borderRadius: 16, padding: "32px 28px", border: "1px solid #e8e8e8" }}>
-                <div style={{ width: 44, height: 44, borderRadius: 10, background: "#534AB7", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20, fontSize: 18, color: "#D4AF37" }}>
-                  {icon}
-                </div>
-                <h3 style={{ fontSize: 17, fontWeight: 700, color: "#13175c", margin: "0 0 10px" }}>{title}</h3>
-                <p style={{ fontSize: 14, color: "#666", lineHeight: 1.75, margin: 0 }}>{body}</p>
+
+          <div className="why-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
+            {/* Card 1 */}
+            <div style={{ background: "white", border: "0.5px solid #e8e7f5", borderRadius: 8, padding: 20 }}>
+              <div style={{ width: 32, height: 32, borderRadius: 6, background: "#EEEDFE", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 14 }}>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <rect x="1" y="1" width="6" height="6" rx="1" fill="#534AB7" />
+                  <rect x="9" y="1" width="6" height="6" rx="1" fill="#534AB7" opacity="0.5" />
+                  <rect x="1" y="9" width="6" height="6" rx="1" fill="#534AB7" opacity="0.5" />
+                  <rect x="9" y="9" width="6" height="6" rx="1" fill="#534AB7" />
+                </svg>
               </div>
-            ))}
+              <h3 style={{ fontFamily: "Georgia, serif", fontSize: 13, fontWeight: 700, color: "#0d0b1a", margin: "0 0 8px" }}>Disciplined Process</h3>
+              <p style={{ fontSize: 11, color: "#666", lineHeight: 1.6, margin: 0, fontFamily: "-apple-system, Arial, sans-serif" }}>
+                A rigorous, research-driven investment framework focused on long-term value creation across Pacific markets and global equities.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div style={{ background: "white", border: "0.5px solid #e8e7f5", borderRadius: 8, padding: 20 }}>
+              <div style={{ width: 32, height: 32, borderRadius: 6, background: "#EEEDFE", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 14 }}>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="6" stroke="#534AB7" strokeWidth="1.5" fill="none" />
+                  <path d="M5 8l2 2 4-4" stroke="#534AB7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+              <h3 style={{ fontFamily: "Georgia, serif", fontSize: 13, fontWeight: 700, color: "#0d0b1a", margin: "0 0 8px" }}>Full Transparency</h3>
+              <p style={{ fontSize: 11, color: "#666", lineHeight: 1.6, margin: 0, fontFamily: "-apple-system, Arial, sans-serif" }}>
+                Every investor has real-time access to their account, portfolio performance, and quarterly statements through our secure portal.
+              </p>
+            </div>
+
+            {/* Card 3 — Pacific Roots (teal) */}
+            <div style={{ background: "white", border: "0.5px solid #e8e7f5", borderRadius: 8, padding: 20 }}>
+              <div style={{ width: 32, height: 32, borderRadius: 6, background: "#E1F5EE", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 14 }}>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M8 2C5 2 2 5 2 8s3 6 6 6 6-3 6-6-3-6-6-6z" fill="#0F6E56" opacity="0.2" />
+                  <path d="M8 2C5 2 2 5 2 8s3 6 6 6 6-3 6-6-3-6-6-6z" stroke="#0F6E56" strokeWidth="1.2" fill="none" />
+                  <path d="M8 5v3l2 2" stroke="#0F6E56" strokeWidth="1.2" strokeLinecap="round" />
+                </svg>
+              </div>
+              <h3 style={{ fontFamily: "Georgia, serif", fontSize: 13, fontWeight: 700, color: "#0d0b1a", margin: "0 0 8px" }}>Pacific Roots</h3>
+              <p style={{ fontSize: 11, color: "#666", lineHeight: 1.6, margin: 0, fontFamily: "-apple-system, Arial, sans-serif" }}>
+                Founded by and for Pacific people — bringing institutional-grade investment management to communities across New Zealand, Australia, and the Pacific.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section style={{ background: "linear-gradient(135deg, #534AB7 0%, #4840a8 100%)", padding: "80px 32px", textAlign: "center", color: "white" }}>
-        <div style={{ maxWidth: 520, margin: "0 auto" }}>
-          <h2 style={{ fontSize: 32, fontWeight: 700, margin: "0 0 14px" }}>Already an Investor?</h2>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.65)", lineHeight: 1.7, marginBottom: 36 }}>
-            Access your account, view your latest statement, and download fund documents through the secure investor portal.
-          </p>
+      {/* ── CTA Band ──────────────────────────────────────────── */}
+      <section style={{ background: "#26215C", padding: "40px 48px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 24 }}>
+          <div>
+            <p style={{ fontSize: 9, letterSpacing: 2, color: "rgba(255,255,255,0.5)", textTransform: "uppercase", margin: "0 0 8px", fontFamily: "-apple-system, Arial, sans-serif" }}>
+              Already an Investor?
+            </p>
+            <h2 style={{ fontFamily: "Georgia, serif", fontSize: 20, fontWeight: 700, color: "white", margin: "0 0 6px" }}>
+              Access your investor portal.
+            </h2>
+            <p style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", margin: 0, fontFamily: "-apple-system, Arial, sans-serif" }}>
+              View your account, latest statement, and fund documents in one place.
+            </p>
+          </div>
           <Link href="/login" style={{
-            display: "inline-block", padding: "13px 36px", borderRadius: 8, fontWeight: 700, fontSize: 14,
-            background: "linear-gradient(135deg, #c9a84c, #e8cd6a)", color: "#13175c", textDecoration: "none",
+            padding: "12px 24px", borderRadius: 4, fontWeight: 600, fontSize: 11,
+            background: "#534AB7", color: "white", textDecoration: "none",
+            fontFamily: "-apple-system, Arial, sans-serif", flexShrink: 0, letterSpacing: 0.3,
           }}>
-            Sign In to Investor Portal →
+            Sign In →
           </Link>
         </div>
       </section>
 
       <PublicFooter />
+
+      <style>{`
+        @media (max-width: 900px) {
+          .hero-grid { grid-template-columns: 1fr !important; }
+        }
+        @media (max-width: 640px) {
+          .fund-grid { grid-template-columns: 1fr !important; }
+          .why-grid  { grid-template-columns: 1fr !important; }
+          section { padding-left: 20px !important; padding-right: 20px !important; }
+        }
+      `}</style>
     </div>
   );
 }
