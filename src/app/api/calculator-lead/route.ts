@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
     html: `
       <div style="font-family:Inter,sans-serif;max-width:580px;margin:0 auto;background:#fff;border-top:6px solid #534AB7">
         <div style="padding:36px 40px">
-          <h1 style="font-size:20px;color:#0a1628;margin:0 0 6px">New Discovery Call Request</h1>
+          <h1 style="font-size:20px;color:#13175c;margin:0 0 6px">New Discovery Call Request</h1>
           <p style="font-size:13px;color:#999;margin:0 0 28px">Submitted via the Investment Calculator on elliceinvestmentgroup.com</p>
 
           <table style="width:100%;border-collapse:collapse;font-size:14px">
@@ -80,7 +80,7 @@ export async function POST(req: NextRequest) {
     html: `
       <div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;background:#fff;border-top:6px solid #534AB7">
         <div style="padding:40px 40px 24px">
-          <h1 style="font-size:22px;color:#0a1628;margin:0 0 16px">Hi ${name}, we received your request!</h1>
+          <h1 style="font-size:22px;color:#13175c;margin:0 0 16px">Hi ${name}, we received your request!</h1>
           <p style="font-size:15px;color:#555;line-height:1.75;margin:0 0 20px">
             Thank you for using our investment calculator and expressing interest in Ellice Investment Group.
             Our Managing Director <strong>Easter Tekafa</strong> will be in touch within 1–2 business days to schedule your free discovery call.

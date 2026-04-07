@@ -86,7 +86,7 @@ export default function PortfolioPage() {
           onClick={fetchPortfolio}
           disabled={loading}
           className="px-4 py-2 rounded-lg text-sm font-medium text-white transition disabled:opacity-50"
-          style={{ background: "#0d1b2a" }}
+          style={{ background: "#13175c" }}
         >
           {loading ? "Refreshing…" : "↻ Refresh"}
         </button>

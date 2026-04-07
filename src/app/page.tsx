@@ -29,7 +29,7 @@ export default async function HomePage() {
 
       {/* ── Hero ── */}
       <section style={{
-        background: "linear-gradient(160deg, #0a0e2a 0%, #1a1650 55%, #0f0c38 100%)",
+        background: "linear-gradient(160deg, #13175c 0%, #2d2a8a 55%, #1a1760 100%)",
         color: "white",
         padding: "88px 32px 108px",
         textAlign: "center",
@@ -90,7 +90,7 @@ export default async function HomePage() {
             <Link href="/login" style={{
               padding: "13px 30px", borderRadius: 8, fontWeight: 700, fontSize: 14,
               background: "linear-gradient(135deg, #c9a84c, #e8cd6a)",
-              color: "#0a0e2a", textDecoration: "none", letterSpacing: 0.2,
+              color: "#13175c", textDecoration: "none", letterSpacing: 0.2,
             }}>
               Investor Portal →
             </Link>
@@ -139,7 +139,7 @@ export default async function HomePage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 12 }}>Our Funds</p>
-            <h2 style={{ fontSize: 32, fontWeight: 700, color: "#0a0e2a", margin: "0 0 14px" }}>Two Funds. One Mandate.</h2>
+            <h2 style={{ fontSize: 32, fontWeight: 700, color: "#13175c", margin: "0 0 14px" }}>Two Funds. One Mandate.</h2>
             <p style={{ fontSize: 15, color: "#666", maxWidth: 520, margin: "0 auto" }}>
               Disciplined investment management across global equities and Pacific markets.
             </p>
@@ -150,7 +150,7 @@ export default async function HomePage() {
               { name: "Ellice Growth Fund II", status: "Active", statusColor: "#7B74D4", irr: metrics.fund2ReturnYtd, since: "2024", desc: "Our second fund continues the disciplined investment approach of Fund I, with an expanded focus on high-conviction equity positions." },
             ].map((fund) => (
               <div key={fund.name} style={{ background: "white", borderRadius: 18, border: "1px solid #ebebeb", overflow: "hidden", boxShadow: "0 2px 16px rgba(0,0,0,0.04)" }}>
-                <div style={{ background: "linear-gradient(135deg, #0a0e2a, #1a1650)", padding: "28px 28px 24px" }}>
+                <div style={{ background: "linear-gradient(135deg, #13175c, #2d2a8a)", padding: "28px 28px 24px" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16 }}>
                     <h3 style={{ fontSize: 18, fontWeight: 700, color: "white", margin: 0, lineHeight: 1.3 }}>{fund.name}</h3>
                     <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: fund.statusColor, background: `${fund.statusColor}22`, border: `1px solid ${fund.statusColor}55`, borderRadius: 100, padding: "3px 10px", flexShrink: 0, marginLeft: 12 }}>
@@ -185,7 +185,7 @@ export default async function HomePage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 52 }}>
             <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 12 }}>Why Ellice</p>
-            <h2 style={{ fontSize: 32, fontWeight: 700, color: "#0a0e2a", margin: 0 }}>What Sets Us Apart</h2>
+            <h2 style={{ fontSize: 32, fontWeight: 700, color: "#13175c", margin: 0 }}>What Sets Us Apart</h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
             {[
@@ -197,7 +197,7 @@ export default async function HomePage() {
                 <div style={{ width: 44, height: 44, borderRadius: 10, background: "#534AB7", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20, fontSize: 18, color: "#D4AF37" }}>
                   {icon}
                 </div>
-                <h3 style={{ fontSize: 17, fontWeight: 700, color: "#0a0e2a", margin: "0 0 10px" }}>{title}</h3>
+                <h3 style={{ fontSize: 17, fontWeight: 700, color: "#13175c", margin: "0 0 10px" }}>{title}</h3>
                 <p style={{ fontSize: 14, color: "#666", lineHeight: 1.75, margin: 0 }}>{body}</p>
               </div>
             ))}
@@ -206,7 +206,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── CTA ── */}
-      <section style={{ background: "linear-gradient(135deg, #534AB7 0%, #3b3494 100%)", padding: "80px 32px", textAlign: "center", color: "white" }}>
+      <section style={{ background: "linear-gradient(135deg, #534AB7 0%, #4840a8 100%)", padding: "80px 32px", textAlign: "center", color: "white" }}>
         <div style={{ maxWidth: 520, margin: "0 auto" }}>
           <h2 style={{ fontSize: 32, fontWeight: 700, margin: "0 0 14px" }}>Already an Investor?</h2>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.65)", lineHeight: 1.7, marginBottom: 36 }}>
@@ -214,7 +214,7 @@ export default async function HomePage() {
           </p>
           <Link href="/login" style={{
             display: "inline-block", padding: "13px 36px", borderRadius: 8, fontWeight: 700, fontSize: 14,
-            background: "linear-gradient(135deg, #c9a84c, #e8cd6a)", color: "#0a0e2a", textDecoration: "none",
+            background: "linear-gradient(135deg, #c9a84c, #e8cd6a)", color: "#13175c", textDecoration: "none",
           }}>
             Sign In to Investor Portal →
           </Link>

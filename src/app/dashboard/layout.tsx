@@ -25,7 +25,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
   if (status === "loading" || !session) {
     return (
-      <div className="min-h-screen flex items-center justify-center" style={{ background: "#0d1b2a" }}>
+      <div className="min-h-screen flex items-center justify-center" style={{ background: "#13175c" }}>
         <div className="text-white/40 text-sm">Loading…</div>
       </div>
     );
@@ -34,7 +34,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   return (
     <div className="min-h-screen flex" style={{ background: "#f8f7f4" }}>
       {/* Sidebar */}
-      <aside className="w-64 flex flex-col flex-shrink-0" style={{ background: "linear-gradient(180deg, #0d1b2a 0%, #1b3a5c 100%)" }}>
+      <aside className="w-64 flex flex-col flex-shrink-0" style={{ background: "linear-gradient(180deg, #13175c 0%, #2d2a8a 100%)" }}>
         {/* Logo */}
         <div className="px-6 py-5 border-b border-white/10">
           <img src="/logo.svg" alt="Ellice Investment Group" className="h-10 w-auto brightness-0 invert" />
@@ -50,7 +50,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 href={href}
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${
                   active
-                    ? "text-[#0d1b2a]"
+                    ? "text-[#13175c]"
                     : "text-white/60 hover:text-white hover:bg-white/10"
                 }`}
                 style={active ? { background: "linear-gradient(135deg, #c9a84c, #f0d080)" } : {}}

@@ -21,7 +21,7 @@ export default function AboutPage() {
 
       {/* Hero */}
       <section style={{
-        background: "linear-gradient(160deg, #0a0e2a 0%, #1a1650 60%, #0f0c38 100%)",
+        background: "linear-gradient(160deg, #13175c 0%, #2d2a8a 60%, #1a1760 100%)",
         padding: "80px 32px 100px",
         textAlign: "center",
         color: "white",
@@ -42,7 +42,7 @@ export default function AboutPage() {
       <section style={{ padding: "72px 32px", background: "#f5f4f8" }}>
         <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
           <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 16 }}>Our Mission</p>
-          <h2 style={{ fontSize: 28, fontWeight: 700, color: "#0a1628", margin: "0 0 20px" }}>
+          <h2 style={{ fontSize: 28, fontWeight: 700, color: "#13175c", margin: "0 0 20px" }}>
             Wealth Creation for Pacific Communities
           </h2>
           <p style={{ fontSize: 16, color: "#555", lineHeight: 1.85 }}>
@@ -58,7 +58,7 @@ export default function AboutPage() {
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 52 }}>
             <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 12 }}>Leadership</p>
-            <h2 style={{ fontSize: 30, fontWeight: 700, color: "#0a1628", margin: 0 }}>Our Team</h2>
+            <h2 style={{ fontSize: 30, fontWeight: 700, color: "#13175c", margin: 0 }}>Our Team</h2>
           </div>
 
           {/* Easter Tekafa - MD card */}
@@ -80,7 +80,7 @@ export default function AboutPage() {
                     width: 72,
                     height: 72,
                     borderRadius: "50%",
-                    background: "linear-gradient(135deg, #0a1628, #1b3a5c)",
+                    background: "linear-gradient(135deg, #13175c, #2d2a8a)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -93,7 +93,7 @@ export default function AboutPage() {
                   </div>
                   <div style={{ flex: 1 }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", marginBottom: 4 }}>
-                      <h3 style={{ fontSize: 22, fontWeight: 700, color: "#0a1628", margin: 0 }}>Easter Tekafa</h3>
+                      <h3 style={{ fontSize: 22, fontWeight: 700, color: "#13175c", margin: 0 }}>Easter Tekafa</h3>
                       <span style={{
                         fontSize: 10,
                         fontWeight: 700,
@@ -146,7 +146,7 @@ export default function AboutPage() {
                 width: 52,
                 height: 52,
                 borderRadius: "50%",
-                background: "linear-gradient(135deg, #0a1628, #1b3a5c)",
+                background: "linear-gradient(135deg, #13175c, #2d2a8a)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -158,7 +158,7 @@ export default function AboutPage() {
                 IC
               </div>
               <div>
-                <h3 style={{ fontSize: 18, fontWeight: 700, color: "#0a1628", margin: "0 0 4px" }}>Investment Committee</h3>
+                <h3 style={{ fontSize: 18, fontWeight: 700, color: "#13175c", margin: "0 0 4px" }}>Investment Committee</h3>
                 <p style={{ fontSize: 13, fontWeight: 600, color: "#D4AF37", textTransform: "uppercase", letterSpacing: 1, margin: "0 0 12px" }}>Ellice Capital Team</p>
                 <p style={{ fontSize: 14, color: "#666", lineHeight: 1.75, margin: "0 0 14px" }}>
                   A dedicated team of investment professionals overseeing portfolio construction, risk management,
@@ -178,7 +178,7 @@ export default function AboutPage() {
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 52 }}>
             <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 12 }}>History</p>
-            <h2 style={{ fontSize: 30, fontWeight: 700, color: "#0a1628", margin: 0 }}>Our Journey</h2>
+            <h2 style={{ fontSize: 30, fontWeight: 700, color: "#13175c", margin: 0 }}>Our Journey</h2>
           </div>
           <div style={{ position: "relative" }}>
             <div style={{ position: "absolute", left: 56, top: 8, bottom: 8, width: 2, background: "#ddd" }} />
@@ -218,7 +218,7 @@ export default function AboutPage() {
             { label: "Community", body: "Built by and for Pacific people, with a long-term commitment to the region." },
           ].map(({ label, body }) => (
             <div key={label} style={{ borderLeft: "3px solid #D4AF37", paddingLeft: 20 }}>
-              <h3 style={{ fontSize: 16, fontWeight: 700, color: "#0a1628", margin: "0 0 8px" }}>{label}</h3>
+              <h3 style={{ fontSize: 16, fontWeight: 700, color: "#13175c", margin: "0 0 8px" }}>{label}</h3>
               <p style={{ fontSize: 14, color: "#666", lineHeight: 1.7, margin: 0 }}>{body}</p>
             </div>
           ))}

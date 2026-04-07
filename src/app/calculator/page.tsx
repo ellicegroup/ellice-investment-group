@@ -6,7 +6,7 @@ import PublicFooter from "@/components/PublicFooter";
 
 const SCENARIOS = [
   { label: "Ellice Growth Fund", rate: 0.184, color: "#534AB7", textColor: "white", note: "Based on Fund I historical IRR" },
-  { label: "S&P 500 Index", rate: 0.10, color: "#D4AF37", textColor: "#0a1628", note: "Historical average (1957–present)" },
+  { label: "S&P 500 Index", rate: 0.10, color: "#D4AF37", textColor: "#13175c", note: "Historical average (1957–present)" },
   { label: "Term Deposit", rate: 0.045, color: "#e8e8e8", textColor: "#555", note: "NZ average term deposit rate" },
 ];
 
@@ -92,7 +92,7 @@ export default function CalculatorPage() {
 
       {/* Hero */}
       <section style={{
-        background: "linear-gradient(160deg, #0a0e2a 0%, #1a1650 55%, #0f0c38 100%)",
+        background: "linear-gradient(160deg, #13175c 0%, #2d2a8a 55%, #1a1760 100%)",
         padding: "72px 32px 88px",
         textAlign: "center",
         color: "white",
@@ -118,7 +118,7 @@ export default function CalculatorPage() {
 
             {/* Inputs */}
             <div style={{ background: "white", borderRadius: 18, padding: 36, border: "1px solid #e8e8e8", boxShadow: "0 2px 16px rgba(0,0,0,0.04)" }}>
-              <h2 style={{ fontSize: 18, fontWeight: 700, color: "#0a1628", margin: "0 0 28px" }}>Your Scenario</h2>
+              <h2 style={{ fontSize: 18, fontWeight: 700, color: "#13175c", margin: "0 0 28px" }}>Your Scenario</h2>
 
               {/* Initial Investment */}
               <div style={{ marginBottom: 28 }}>
@@ -206,7 +206,7 @@ export default function CalculatorPage() {
                     fontWeight: 700,
                     fontSize: 14,
                     background: "linear-gradient(135deg, #c9a84c, #e8cd6a)",
-                    color: "#0a1628",
+                    color: "#13175c",
                     border: "none",
                     cursor: "pointer",
                   }}
@@ -219,7 +219,7 @@ export default function CalculatorPage() {
             {/* Results */}
             <div>
               <div style={{ background: "white", borderRadius: 18, padding: 36, border: "1px solid #e8e8e8", boxShadow: "0 2px 16px rgba(0,0,0,0.04)", marginBottom: 20 }}>
-                <h2 style={{ fontSize: 18, fontWeight: 700, color: "#0a1628", margin: "0 0 8px" }}>
+                <h2 style={{ fontSize: 18, fontWeight: 700, color: "#13175c", margin: "0 0 8px" }}>
                   After {years} Years
                 </h2>
                 <p style={{ fontSize: 13, color: "#999", margin: "0 0 28px" }}>
@@ -303,7 +303,7 @@ export default function CalculatorPage() {
             {submitted ? (
               <div style={{ textAlign: "center", padding: "48px 0" }}>
                 <div style={{ fontSize: 48, marginBottom: 16 }}>✅</div>
-                <h2 style={{ fontSize: 26, fontWeight: 700, color: "#0a1628", margin: "0 0 12px" }}>Request Received!</h2>
+                <h2 style={{ fontSize: 26, fontWeight: 700, color: "#13175c", margin: "0 0 12px" }}>Request Received!</h2>
                 <p style={{ fontSize: 16, color: "#555", lineHeight: 1.7, marginBottom: 24 }}>
                   Thank you — Easter Tekafa will be in touch within 1–2 business days to schedule your call.
                 </p>
@@ -320,7 +320,7 @@ export default function CalculatorPage() {
                   <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 12 }}>
                     Get Started
                   </p>
-                  <h2 style={{ fontSize: 26, fontWeight: 700, color: "#0a1628", margin: "0 0 12px" }}>
+                  <h2 style={{ fontSize: 26, fontWeight: 700, color: "#13175c", margin: "0 0 12px" }}>
                     Book a Free Discovery Call
                   </h2>
                   <p style={{ fontSize: 15, color: "#555", lineHeight: 1.7 }}>
@@ -434,7 +434,7 @@ export default function CalculatorPage() {
                       fontWeight: 700,
                       fontSize: 15,
                       background: submitting ? "#ccc" : "linear-gradient(135deg, #c9a84c, #e8cd6a)",
-                      color: "#0a1628",
+                      color: "#13175c",
                       border: "none",
                       cursor: submitting ? "not-allowed" : "pointer",
                     }}
@@ -453,7 +453,7 @@ export default function CalculatorPage() {
 
       {/* CTA if booking not shown */}
       {!showBooking && (
-        <section style={{ background: "linear-gradient(135deg, #534AB7, #3b3494)", padding: "64px 32px", textAlign: "center", color: "white" }}>
+        <section style={{ background: "linear-gradient(135deg, #534AB7, #4840a8)", padding: "64px 32px", textAlign: "center", color: "white" }}>
           <div style={{ maxWidth: 500, margin: "0 auto" }}>
             <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 12px" }}>Ready to Start Investing?</h2>
             <p style={{ fontSize: 15, color: "rgba(255,255,255,0.65)", lineHeight: 1.7, marginBottom: 28 }}>
@@ -467,7 +467,7 @@ export default function CalculatorPage() {
                 fontWeight: 700,
                 fontSize: 14,
                 background: "linear-gradient(135deg, #c9a84c, #e8cd6a)",
-                color: "#0a1628",
+                color: "#13175c",
                 border: "none",
                 cursor: "pointer",
               }}

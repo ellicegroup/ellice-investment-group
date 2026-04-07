@@ -24,7 +24,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   if (status === "loading" || !session || !isAdmin) {
     return (
-      <div className="min-h-screen flex items-center justify-center" style={{ background: "#0d1b2a" }}>
+      <div className="min-h-screen flex items-center justify-center" style={{ background: "#13175c" }}>
         <div className="text-white/40 text-sm">Verifying access…</div>
       </div>
     );

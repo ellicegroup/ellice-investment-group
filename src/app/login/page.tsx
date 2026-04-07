@@ -28,7 +28,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: "linear-gradient(135deg, #0d1b2a 0%, #1b2e45 50%, #0d1b2a 100%)" }}>
+    <div className="min-h-screen flex flex-col" style={{ background: "linear-gradient(135deg, #13175c 0%, #1b2e45 50%, #13175c 100%)" }}>
       {/* Top bar */}
       <div className="border-b border-white/10 px-8 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -45,7 +45,7 @@ export default function LoginPage() {
           {/* Card */}
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
             {/* Card header */}
-            <div className="px-8 pt-10 pb-8 text-center" style={{ background: "linear-gradient(135deg, #0d1b2a 0%, #1b3a5c 100%)" }}>
+            <div className="px-8 pt-10 pb-8 text-center" style={{ background: "linear-gradient(135deg, #13175c 0%, #2d2a8a 100%)" }}>
               <img src="/logo.svg" alt="Ellice Investment Group" className="h-12 w-auto mx-auto mb-5 brightness-0 invert" />
               <h1 className="text-white text-2xl font-semibold tracking-tight">Investor Portal</h1>
               <p className="text-white/60 text-sm mt-1">Sign in to access your account</p>
@@ -91,7 +91,7 @@ export default function LoginPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3 rounded-lg font-semibold text-sm text-[#0d1b2a] transition disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full py-3 rounded-lg font-semibold text-sm text-[#13175c] transition disabled:opacity-60 disabled:cursor-not-allowed"
                   style={{ background: "linear-gradient(135deg, #c9a84c, #f0d080)" }}
                 >
                   {loading ? "Signing in…" : "Sign In to Portal"}

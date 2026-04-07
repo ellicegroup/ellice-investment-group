@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function PublicFooter() {
   return (
-    <footer style={{ background: "#0d1b2a", borderTop: "1px solid rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.5)", fontFamily: "sans-serif" }}>
+    <footer style={{ background: "#13175c", borderTop: "1px solid rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.5)", fontFamily: "sans-serif" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "48px 32px 32px", display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 40 }}>
         {/* Brand */}
         <div>

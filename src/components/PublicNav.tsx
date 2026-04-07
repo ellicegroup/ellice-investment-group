@@ -16,7 +16,7 @@ export default function PublicNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav style={{ background: "#0d1b2a", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+    <nav style={{ background: "#13175c", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 72 }}>
         {/* Logo */}
         <Link href="/" style={{ textDecoration: "none", flexShrink: 0 }}>
@@ -54,7 +54,7 @@ export default function PublicNav() {
               fontWeight: 600,
               textDecoration: "none",
               background: "linear-gradient(135deg, #c9a84c, #f0d080)",
-              color: "#0d1b2a",
+              color: "#13175c",
               transition: "opacity 0.15s",
             }}
           >
@@ -74,7 +74,7 @@ export default function PublicNav() {
 
       {/* Mobile menu */}
       {open && (
-        <div style={{ background: "#0d1b2a", borderTop: "1px solid rgba(255,255,255,0.08)", padding: "12px 24px 20px" }}>
+        <div style={{ background: "#13175c", borderTop: "1px solid rgba(255,255,255,0.08)", padding: "12px 24px 20px" }}>
           {LINKS.map(({ href, label }) => (
             <Link
               key={href}

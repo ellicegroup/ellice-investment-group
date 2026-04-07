@@ -86,7 +86,7 @@ export default function LearnPage() {
 
       {/* Hero */}
       <section style={{
-        background: "linear-gradient(160deg, #0a0e2a 0%, #1a1650 55%, #0f0c38 100%)",
+        background: "linear-gradient(160deg, #13175c 0%, #2d2a8a 55%, #1a1760 100%)",
         padding: "72px 32px 88px",
         textAlign: "center",
         color: "white",
@@ -109,7 +109,7 @@ export default function LearnPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 12 }}>Follow Along</p>
-            <h2 style={{ fontSize: 28, fontWeight: 700, color: "#0a1628", margin: "0 0 10px" }}>Find Us Online</h2>
+            <h2 style={{ fontSize: 28, fontWeight: 700, color: "#13175c", margin: "0 0 10px" }}>Find Us Online</h2>
             <p style={{ fontSize: 14, color: "#666" }}>Follow Easter and the Ellice team for regular investment education and fund updates.</p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 18 }}>
@@ -147,7 +147,7 @@ export default function LearnPage() {
                     {icon}
                   </div>
                   <div>
-                    <p style={{ fontSize: 15, fontWeight: 700, color: "#0a1628", margin: 0 }}>{name}</p>
+                    <p style={{ fontSize: 15, fontWeight: 700, color: "#13175c", margin: 0 }}>{name}</p>
                     <p style={{ fontSize: 12, color: "#888", margin: 0 }}>{handle}</p>
                   </div>
                 </div>
@@ -167,7 +167,7 @@ export default function LearnPage() {
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 36, flexWrap: "wrap", gap: 16 }}>
             <div>
               <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 10 }}>Video Library</p>
-              <h2 style={{ fontSize: 28, fontWeight: 700, color: "#0a1628", margin: 0 }}>Watch & Learn</h2>
+              <h2 style={{ fontSize: 28, fontWeight: 700, color: "#13175c", margin: 0 }}>Watch & Learn</h2>
             </div>
             <a
               href="https://www.youtube.com/@ElliceInvestmentGroup"
@@ -191,7 +191,7 @@ export default function LearnPage() {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24 }}>
               {FEATURED_VIDEOS.map(({ id, title, description, category }) => (
                 <div key={id} style={{ background: "white", borderRadius: 16, border: "1px solid #e8e8e8", overflow: "hidden" }}>
-                  <div style={{ position: "relative", paddingTop: "56.25%", background: "#0a1628" }}>
+                  <div style={{ position: "relative", paddingTop: "56.25%", background: "#13175c" }}>
                     <iframe
                       style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
                       src={`https://www.youtube.com/embed/${id}`}
@@ -213,7 +213,7 @@ export default function LearnPage() {
                       display: "inline-block",
                       marginBottom: 10,
                     }}>{category}</span>
-                    <h3 style={{ fontSize: 16, fontWeight: 700, color: "#0a1628", margin: "0 0 8px", lineHeight: 1.4 }}>{title}</h3>
+                    <h3 style={{ fontSize: 16, fontWeight: 700, color: "#13175c", margin: "0 0 8px", lineHeight: 1.4 }}>{title}</h3>
                     <p style={{ fontSize: 13, color: "#666", lineHeight: 1.65, margin: 0 }}>{description}</p>
                   </div>
                 </div>
@@ -229,7 +229,7 @@ export default function LearnPage() {
               border: "2px dashed #ddd",
             }}>
               <div style={{ fontSize: 48, marginBottom: 16 }}>🎬</div>
-              <h3 style={{ fontSize: 20, fontWeight: 700, color: "#0a1628", margin: "0 0 10px" }}>Videos Coming Soon</h3>
+              <h3 style={{ fontSize: 20, fontWeight: 700, color: "#13175c", margin: "0 0 10px" }}>Videos Coming Soon</h3>
               <p style={{ fontSize: 14, color: "#666", maxWidth: 380, margin: "0 auto 24px", lineHeight: 1.7 }}>
                 Easter is creating investment education videos for Pacific communities.
                 Subscribe to YouTube so you don&apos;t miss the first drop.
@@ -262,7 +262,7 @@ export default function LearnPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: 36 }}>
             <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 10 }}>Insights & Articles</p>
-            <h2 style={{ fontSize: 28, fontWeight: 700, color: "#0a1628", margin: 0 }}>Read & Learn</h2>
+            <h2 style={{ fontSize: 28, fontWeight: 700, color: "#13175c", margin: 0 }}>Read & Learn</h2>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
@@ -297,7 +297,7 @@ export default function LearnPage() {
                     }}>{category}</span>
                     <span style={{ fontSize: 12, color: "#bbb" }}>{date}</span>
                   </div>
-                  <h3 style={{ fontSize: 17, fontWeight: 700, color: "#0a1628", margin: "0 0 8px", lineHeight: 1.35 }}>{title}</h3>
+                  <h3 style={{ fontSize: 17, fontWeight: 700, color: "#13175c", margin: "0 0 8px", lineHeight: 1.35 }}>{title}</h3>
                   <p style={{ fontSize: 13, color: "#666", lineHeight: 1.65, margin: 0 }}>{excerpt}</p>
                 </div>
                 <span style={{ fontSize: 20, color: "#ddd", flexShrink: 0 }}>→</span>
@@ -312,7 +312,7 @@ export default function LearnPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 36 }}>
             <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 10 }}>Topics We Cover</p>
-            <h2 style={{ fontSize: 26, fontWeight: 700, color: "#0a1628", margin: 0 }}>What You&apos;ll Learn</h2>
+            <h2 style={{ fontSize: 26, fontWeight: 700, color: "#13175c", margin: 0 }}>What You&apos;ll Learn</h2>
           </div>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
             {[
@@ -345,7 +345,7 @@ export default function LearnPage() {
 
       {/* Newsletter / notify CTA */}
       <section style={{
-        background: "linear-gradient(135deg, #534AB7, #3b3494)",
+        background: "linear-gradient(135deg, #534AB7, #4840a8)",
         padding: "72px 32px",
         textAlign: "center",
         color: "white",

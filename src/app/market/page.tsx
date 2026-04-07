@@ -11,13 +11,13 @@ function IndexCard({ idx }: { idx: MarketIndex }) {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16 }}>
         <div>
           <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5, color: "#888", margin: "0 0 4px" }}>{idx.region}</p>
-          <p style={{ fontSize: 16, fontWeight: 700, color: "#0d1b2a", margin: 0 }}>{idx.name}</p>
+          <p style={{ fontSize: 16, fontWeight: 700, color: "#13175c", margin: 0 }}>{idx.name}</p>
         </div>
         <span style={{ fontSize: 11, fontWeight: 600, padding: "4px 10px", borderRadius: 100, background: up ? "#f0fdf4" : "#fef2f2", color: up ? "#15803d" : "#dc2626" }}>
           {up ? "▲" : "▼"} {idx.region}
         </span>
       </div>
-      <p style={{ fontSize: 32, fontWeight: 700, color: "#0d1b2a", margin: "0 0 8px", fontVariantNumeric: "tabular-nums" }}>
+      <p style={{ fontSize: 32, fontWeight: 700, color: "#13175c", margin: "0 0 8px", fontVariantNumeric: "tabular-nums" }}>
         {idx.price.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
       </p>
       <p style={{ fontSize: 14, fontWeight: 600, color: up ? "#15803d" : "#dc2626", margin: 0 }}>
@@ -80,7 +80,7 @@ export default function MarketPage() {
       <PublicNav />
 
       {/* Hero */}
-      <section style={{ background: "linear-gradient(135deg, #0a0e2a, #1a1650)", padding: "72px 32px 88px", color: "white" }}>
+      <section style={{ background: "linear-gradient(135deg, #13175c, #2d2a8a)", padding: "72px 32px 88px", color: "white" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: 20 }}>
           <div>
             <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 3, color: "#D4AF37", marginBottom: 12 }}>Live Market Data</p>
@@ -119,7 +119,7 @@ export default function MarketPage() {
       <section style={{ padding: "64px 32px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: "#888", marginBottom: 8 }}>Fund Portfolio</p>
-          <h2 style={{ fontSize: 26, fontWeight: 700, color: "#0d1b2a", margin: "0 0 32px" }}>Sector Allocation</h2>
+          <h2 style={{ fontSize: 26, fontWeight: 700, color: "#13175c", margin: "0 0 32px" }}>Sector Allocation</h2>
           <div style={{ background: "#f5f4f8", borderRadius: 20, padding: "32px 36px" }}>
             {[
               { label: "Financials",   pct: 53.2, sub: "BRK.B, JPM, Visa",    color: "#D4AF37" },
@@ -149,15 +149,15 @@ export default function MarketPage() {
       <section style={{ background: "#f5f4f8", padding: "64px 32px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: "#888", marginBottom: 8 }}>Insights</p>
-          <h2 style={{ fontSize: 26, fontWeight: 700, color: "#0d1b2a", margin: "0 0 32px" }}>Market Commentary</h2>
+          <h2 style={{ fontSize: 26, fontWeight: 700, color: "#13175c", margin: "0 0 32px" }}>Market Commentary</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
             {MARKET_COMMENTARY.map(({ title, body, tag, date }) => (
               <div key={title} style={{ background: "white", borderRadius: 16, padding: 28, border: "1px solid #eee", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}>
                 <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
-                  <span style={{ fontSize: 11, fontWeight: 600, padding: "3px 10px", borderRadius: 100, background: "#0d1b2a", color: "#D4AF37" }}>{tag}</span>
+                  <span style={{ fontSize: 11, fontWeight: 600, padding: "3px 10px", borderRadius: 100, background: "#13175c", color: "#D4AF37" }}>{tag}</span>
                   <span style={{ fontSize: 11, color: "#aaa", padding: "3px 0" }}>{date}</span>
                 </div>
-                <h3 style={{ fontSize: 16, fontWeight: 700, color: "#0d1b2a", margin: "0 0 10px", lineHeight: 1.4 }}>{title}</h3>
+                <h3 style={{ fontSize: 16, fontWeight: 700, color: "#13175c", margin: "0 0 10px", lineHeight: 1.4 }}>{title}</h3>
                 <p style={{ fontSize: 14, color: "#666", lineHeight: 1.75, margin: 0 }}>{body}</p>
               </div>
             ))}
@@ -166,12 +166,12 @@ export default function MarketPage() {
       </section>
 
       {/* Investor CTA */}
-      <section style={{ background: "linear-gradient(135deg, #0a0e2a, #1a1650)", padding: "64px 32px", textAlign: "center", color: "white" }}>
+      <section style={{ background: "linear-gradient(135deg, #13175c, #2d2a8a)", padding: "64px 32px", textAlign: "center", color: "white" }}>
         <h2 style={{ fontSize: 28, fontWeight: 700, margin: "0 0 14px" }}>View Your Portfolio Performance</h2>
         <p style={{ fontSize: 15, color: "rgba(255,255,255,0.6)", marginBottom: 32 }}>
           Investors can see live portfolio data and their account value in the investor portal.
         </p>
-        <a href="/login" style={{ display: "inline-block", padding: "13px 32px", borderRadius: 10, fontWeight: 700, fontSize: 14, background: "linear-gradient(135deg, #c9a84c, #f0d080)", color: "#0d1b2a", textDecoration: "none" }}>
+        <a href="/login" style={{ display: "inline-block", padding: "13px 32px", borderRadius: 10, fontWeight: 700, fontSize: 14, background: "linear-gradient(135deg, #c9a84c, #f0d080)", color: "#13175c", textDecoration: "none" }}>
           Investor Portal →
         </a>
       </section>
