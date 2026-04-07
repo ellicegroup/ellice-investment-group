@@ -13,18 +13,18 @@ const LINKS = [
 
 function LogoFull() {
   return (
-    <svg viewBox="0 0 280 48" width="280" height="48" xmlns="http://www.w3.org/2000/svg" aria-label="Ellice Capital">
-      <g transform="translate(24,24)">
-        <polygon points="0,-21 18,-10.5 18,10.5 0,21 -18,10.5 -18,-10.5" fill="#534AB7" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" />
-        <polygon points="0,-15 13,-7.5 13,7.5 0,15 -13,7.5 -13,-7.5" fill="none" stroke="rgba(255,255,255,0.18)" strokeWidth="0.8" />
-        <text x="0" y="6" textAnchor="middle" fontFamily="Georgia, serif" fontSize="13" fontWeight="700" fill="#EF9F27" letterSpacing="1">EC</text>
+    <svg viewBox="0 0 320 52" width="320" height="52" xmlns="http://www.w3.org/2000/svg" aria-label="Ellice Capital">
+      <g transform="translate(26,26)">
+        <polygon points="0,-23 20,-11.5 20,11.5 0,23 -20,11.5 -20,-11.5" fill="#534AB7" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" />
+        <polygon points="0,-16 14,-8 14,8 0,16 -14,8 -14,-8" fill="none" stroke="rgba(255,255,255,0.18)" strokeWidth="0.8" />
+        <text x="0" y="6" textAnchor="middle" fontFamily="Georgia, serif" fontSize="14" fontWeight="700" fill="#EF9F27" letterSpacing="1">EC</text>
       </g>
-      <text x="56" y="22" fontFamily="Georgia, serif" fontSize="22" fontWeight="700" letterSpacing="7" fill="white">ELLICE</text>
-      <text x="57" y="36" fontFamily="-apple-system, Arial, sans-serif" fontSize="8" letterSpacing="3" fill="rgba(255,255,255,0.4)">CAPITAL · INVESTMENT GROUP</text>
-      <line x1="196" y1="10" x2="196" y2="38" stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
-      <text x="206" y="20" fontFamily="Georgia, serif" fontSize="8" letterSpacing="0.5" fill="rgba(255,255,255,0.35)">Pacific</text>
-      <text x="206" y="30" fontFamily="Georgia, serif" fontSize="8" letterSpacing="0.5" fill="rgba(255,255,255,0.35)">Sovereign</text>
-      <text x="206" y="40" fontFamily="Georgia, serif" fontSize="8" letterSpacing="0.5" fill="rgba(255,255,255,0.35)">Capital</text>
+      <text x="60" y="23" fontFamily="Georgia, serif" fontSize="22" fontWeight="700" letterSpacing="7" fill="white">ELLICE</text>
+      <text x="61" y="38" fontFamily="-apple-system, Arial, sans-serif" fontSize="9" letterSpacing="2.5" fill="rgba(255,255,255,0.65)">CAPITAL · INVESTMENT GROUP</text>
+      <line x1="204" y1="8" x2="204" y2="44" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+      <text x="214" y="20" fontFamily="Georgia, serif" fontSize="9.5" letterSpacing="0.5" fill="rgba(255,255,255,0.65)">Pacific</text>
+      <text x="214" y="32" fontFamily="Georgia, serif" fontSize="9.5" letterSpacing="0.5" fill="rgba(255,255,255,0.65)">Sovereign</text>
+      <text x="214" y="44" fontFamily="Georgia, serif" fontSize="9.5" letterSpacing="0.5" fill="rgba(255,255,255,0.65)">Capital</text>
     </svg>
   );
 }
@@ -35,7 +35,7 @@ export default function PublicNav() {
 
   return (
     <nav style={{ background: "#0d0b1a", position: "sticky", top: 0, zIndex: 100 }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 56 }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 68 }}>
 
         <Link href="/" style={{ textDecoration: "none", flexShrink: 0, lineHeight: 0 }}>
           <LogoFull />

@@ -12,25 +12,6 @@ export const metadata: Metadata = {
 
 export const revalidate = 300;
 
-// ── Inline hero logo (larger version, 340×58) ─────────────────────────────
-function LogoHero() {
-  return (
-    <svg viewBox="0 0 280 48" width="340" height="58" xmlns="http://www.w3.org/2000/svg" aria-label="Ellice Capital">
-      <g transform="translate(24,24)">
-        <polygon points="0,-21 18,-10.5 18,10.5 0,21 -18,10.5 -18,-10.5" fill="#534AB7" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" />
-        <polygon points="0,-15 13,-7.5 13,7.5 0,15 -13,7.5 -13,-7.5" fill="none" stroke="rgba(255,255,255,0.18)" strokeWidth="0.8" />
-        <text x="0" y="6" textAnchor="middle" fontFamily="Georgia, serif" fontSize="13" fontWeight="700" fill="#EF9F27" letterSpacing="1">EC</text>
-      </g>
-      <text x="56" y="22" fontFamily="Georgia, serif" fontSize="22" fontWeight="700" letterSpacing="7" fill="white">ELLICE</text>
-      <text x="57" y="36" fontFamily="-apple-system, Arial, sans-serif" fontSize="8" letterSpacing="3" fill="rgba(255,255,255,0.4)">CAPITAL · INVESTMENT GROUP</text>
-      <line x1="196" y1="10" x2="196" y2="38" stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
-      <text x="206" y="20" fontFamily="Georgia, serif" fontSize="8" letterSpacing="0.5" fill="rgba(255,255,255,0.35)">Pacific</text>
-      <text x="206" y="30" fontFamily="Georgia, serif" fontSize="8" letterSpacing="0.5" fill="rgba(255,255,255,0.35)">Sovereign</text>
-      <text x="206" y="40" fontFamily="Georgia, serif" fontSize="8" letterSpacing="0.5" fill="rgba(255,255,255,0.35)">Capital</text>
-    </svg>
-  );
-}
-
 export default async function HomePage() {
   const metrics = await getFundMetrics();
 
@@ -51,10 +32,6 @@ export default async function HomePage() {
 
           {/* LEFT: text content */}
           <div>
-            <div style={{ marginBottom: 28 }}>
-              <LogoHero />
-            </div>
-
             {/* Eyebrow pill */}
             <div style={{
               display: "inline-flex", alignItems: "center", gap: 8,
