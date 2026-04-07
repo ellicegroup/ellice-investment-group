@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import PublicNav from "@/components/PublicNav";
 import PublicFooter from "@/components/PublicFooter";
-import type { MarketData, MarketIndex } from "@/app/api/market/route";
+import type { MarketData, MarketIndex } from "@/lib/marketTypes";
 
 function IndexCard({ idx }: { idx: MarketIndex }) {
   const up = idx.changePct >= 0;
