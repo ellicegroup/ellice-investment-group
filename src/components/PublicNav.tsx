@@ -6,7 +6,9 @@ import { useState } from "react";
 const LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/market", label: "Market Updates" },
+  { href: "/market", label: "Market" },
+  { href: "/calculator", label: "Calculator" },
+  { href: "/learn", label: "Learn" },
 ];
 
 export default function PublicNav() {

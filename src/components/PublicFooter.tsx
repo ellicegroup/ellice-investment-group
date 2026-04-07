@@ -16,7 +16,7 @@ export default function PublicFooter() {
         {/* Navigate */}
         <div>
           <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: "#D4AF37", marginBottom: 16 }}>Navigate</p>
-          {[["Home", "/"], ["About", "/about"], ["Market Updates", "/market"]].map(([label, href]) => (
+          {[["Home", "/"], ["About", "/about"], ["Market", "/market"], ["Calculator", "/calculator"], ["Learn", "/learn"]].map(([label, href]) => (
             <Link key={href} href={href} style={{ display: "block", fontSize: 13, color: "rgba(255,255,255,0.5)", textDecoration: "none", marginBottom: 10, transition: "color 0.15s" }}>
               {label}
             </Link>
