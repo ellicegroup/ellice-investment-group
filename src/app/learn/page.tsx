@@ -86,7 +86,7 @@ export default function LearnPage() {
 
       {/* Hero */}
       <section style={{
-        background: "linear-gradient(160deg, #0a1628 0%, #0d2236 55%, #0a1e14 100%)",
+        background: "linear-gradient(160deg, #0a0e2a 0%, #1a1650 55%, #0f0c38 100%)",
         padding: "72px 32px 88px",
         textAlign: "center",
         color: "white",
@@ -105,7 +105,7 @@ export default function LearnPage() {
       </section>
 
       {/* Social media links */}
-      <section style={{ padding: "64px 32px", background: "#f5f4f1" }}>
+      <section style={{ padding: "64px 32px", background: "#f5f4f8" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 12 }}>Follow Along</p>
@@ -206,7 +206,7 @@ export default function LearnPage() {
                       fontWeight: 700,
                       letterSpacing: 1.5,
                       textTransform: "uppercase",
-                      color: "#2D5A43",
+                      color: "#534AB7",
                       background: "rgba(45,90,67,0.1)",
                       borderRadius: 100,
                       padding: "3px 9px",
@@ -222,7 +222,7 @@ export default function LearnPage() {
           ) : (
             /* Empty state — videos coming soon */
             <div style={{
-              background: "#f5f4f1",
+              background: "#f5f4f8",
               borderRadius: 18,
               padding: "64px 40px",
               textAlign: "center",
@@ -258,7 +258,7 @@ export default function LearnPage() {
       </section>
 
       {/* Articles */}
-      <section style={{ padding: "64px 32px", background: "#f5f4f1" }}>
+      <section style={{ padding: "64px 32px", background: "#f5f4f8" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: 36 }}>
             <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 10 }}>Insights & Articles</p>
@@ -290,7 +290,7 @@ export default function LearnPage() {
                       fontWeight: 700,
                       letterSpacing: 1.5,
                       textTransform: "uppercase",
-                      color: "#2D5A43",
+                      color: "#534AB7",
                       background: "rgba(45,90,67,0.1)",
                       borderRadius: 100,
                       padding: "3px 9px",
@@ -332,7 +332,7 @@ export default function LearnPage() {
                 borderRadius: 100,
                 fontSize: 13,
                 fontWeight: 500,
-                background: "#f5f4f1",
+                background: "#f5f4f8",
                 border: "1px solid #e8e8e8",
                 color: "#444",
               }}>
@@ -345,7 +345,7 @@ export default function LearnPage() {
 
       {/* Newsletter / notify CTA */}
       <section style={{
-        background: "linear-gradient(135deg, #2D5A43, #1a3828)",
+        background: "linear-gradient(135deg, #534AB7, #3b3494)",
         padding: "72px 32px",
         textAlign: "center",
         color: "white",

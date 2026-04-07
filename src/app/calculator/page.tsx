@@ -5,7 +5,7 @@ import PublicNav from "@/components/PublicNav";
 import PublicFooter from "@/components/PublicFooter";
 
 const SCENARIOS = [
-  { label: "Ellice Growth Fund", rate: 0.184, color: "#2D5A43", textColor: "white", note: "Based on Fund I historical IRR" },
+  { label: "Ellice Growth Fund", rate: 0.184, color: "#534AB7", textColor: "white", note: "Based on Fund I historical IRR" },
   { label: "S&P 500 Index", rate: 0.10, color: "#D4AF37", textColor: "#0a1628", note: "Historical average (1957–present)" },
   { label: "Term Deposit", rate: 0.045, color: "#e8e8e8", textColor: "#555", note: "NZ average term deposit rate" },
 ];
@@ -92,7 +92,7 @@ export default function CalculatorPage() {
 
       {/* Hero */}
       <section style={{
-        background: "linear-gradient(160deg, #0a1628 0%, #0d2236 55%, #0a1e14 100%)",
+        background: "linear-gradient(160deg, #0a0e2a 0%, #1a1650 55%, #0f0c38 100%)",
         padding: "72px 32px 88px",
         textAlign: "center",
         color: "white",
@@ -112,7 +112,7 @@ export default function CalculatorPage() {
       </section>
 
       {/* Calculator */}
-      <section style={{ padding: "64px 32px", background: "#f5f4f1" }}>
+      <section style={{ padding: "64px 32px", background: "#f5f4f8" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "minmax(300px, 380px) 1fr", gap: 40, alignItems: "start" }}>
 
@@ -124,7 +124,7 @@ export default function CalculatorPage() {
               <div style={{ marginBottom: 28 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 10 }}>
                   <label style={{ fontSize: 13, fontWeight: 600, color: "#333" }}>Initial Investment</label>
-                  <span style={{ fontSize: 15, fontWeight: 700, color: "#2D5A43" }}>${formatNum(principal)}</span>
+                  <span style={{ fontSize: 15, fontWeight: 700, color: "#534AB7" }}>${formatNum(principal)}</span>
                 </div>
                 <input
                   type="range"
@@ -133,7 +133,7 @@ export default function CalculatorPage() {
                   step={1}
                   value={AMOUNT_STEPS.indexOf(principal) === -1 ? 1 : AMOUNT_STEPS.indexOf(principal)}
                   onChange={(e) => setPrincipal(AMOUNT_STEPS[parseInt(e.target.value)])}
-                  style={{ width: "100%", accentColor: "#2D5A43" }}
+                  style={{ width: "100%", accentColor: "#534AB7" }}
                 />
                 <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "#aaa", marginTop: 4 }}>
                   <span>$5K</span><span>$1M</span>
@@ -144,7 +144,7 @@ export default function CalculatorPage() {
               <div style={{ marginBottom: 28 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 10 }}>
                   <label style={{ fontSize: 13, fontWeight: 600, color: "#333" }}>Monthly Top-Up</label>
-                  <span style={{ fontSize: 15, fontWeight: 700, color: "#2D5A43" }}>${formatNum(monthlyPMT)}</span>
+                  <span style={{ fontSize: 15, fontWeight: 700, color: "#534AB7" }}>${formatNum(monthlyPMT)}</span>
                 </div>
                 <input
                   type="range"
@@ -153,7 +153,7 @@ export default function CalculatorPage() {
                   step={100}
                   value={monthlyPMT}
                   onChange={(e) => setMonthlyPMT(Number(e.target.value))}
-                  style={{ width: "100%", accentColor: "#2D5A43" }}
+                  style={{ width: "100%", accentColor: "#534AB7" }}
                 />
                 <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "#aaa", marginTop: 4 }}>
                   <span>$0 / mo</span><span>$5,000 / mo</span>
@@ -164,7 +164,7 @@ export default function CalculatorPage() {
               <div style={{ marginBottom: 32 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 10 }}>
                   <label style={{ fontSize: 13, fontWeight: 600, color: "#333" }}>Investment Period</label>
-                  <span style={{ fontSize: 15, fontWeight: 700, color: "#2D5A43" }}>{years} years</span>
+                  <span style={{ fontSize: 15, fontWeight: 700, color: "#534AB7" }}>{years} years</span>
                 </div>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                   {YEAR_OPTIONS.map((y) => (
@@ -176,8 +176,8 @@ export default function CalculatorPage() {
                         borderRadius: 8,
                         fontSize: 13,
                         fontWeight: 600,
-                        border: years === y ? "2px solid #2D5A43" : "2px solid #e8e8e8",
-                        background: years === y ? "#2D5A43" : "white",
+                        border: years === y ? "2px solid #534AB7" : "2px solid #e8e8e8",
+                        background: years === y ? "#534AB7" : "white",
                         color: years === y ? "white" : "#555",
                         cursor: "pointer",
                       }}
@@ -189,11 +189,11 @@ export default function CalculatorPage() {
               </div>
 
               {/* Ellice Fund Projection Summary */}
-              <div style={{ background: "#f0f7f3", borderRadius: 12, padding: "20px 20px", border: "1px solid #c8e0d4" }}>
-                <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5, color: "#2D5A43", margin: "0 0 10px" }}>
+              <div style={{ background: "#f0effe", borderRadius: 12, padding: "20px 20px", border: "1px solid #c8c3f0" }}>
+                <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1.5, color: "#534AB7", margin: "0 0 10px" }}>
                   Ellice Fund Projection
                 </p>
-                <p style={{ fontSize: 32, fontWeight: 700, color: "#2D5A43", margin: "0 0 4px" }}>{fmt(projectedValue)}</p>
+                <p style={{ fontSize: 32, fontWeight: 700, color: "#534AB7", margin: "0 0 4px" }}>{fmt(projectedValue)}</p>
                 <p style={{ fontSize: 12, color: "#555", margin: "0 0 10px" }}>
                   {fmt(gain)} gain on {fmt(totalContrib)} invested
                 </p>
@@ -286,7 +286,7 @@ export default function CalculatorPage() {
                   { label: "Multiplier", value: `${(projectedValue / totalContrib).toFixed(1)}×`, green: true },
                 ].map(({ label, value, green }) => (
                   <div key={label} style={{ background: "white", borderRadius: 12, padding: "18px 16px", border: "1px solid #e8e8e8", textAlign: "center" }}>
-                    <p style={{ fontSize: 20, fontWeight: 700, color: green ? "#2D5A43" : "#1a1a1a", margin: "0 0 4px" }}>{value}</p>
+                    <p style={{ fontSize: 20, fontWeight: 700, color: green ? "#534AB7" : "#1a1a1a", margin: "0 0 4px" }}>{value}</p>
                     <p style={{ fontSize: 11, color: "#999", margin: 0 }}>{label}</p>
                   </div>
                 ))}
@@ -309,7 +309,7 @@ export default function CalculatorPage() {
                 </p>
                 <button
                   onClick={() => { setShowBooking(false); setSubmitted(false); setForm({ name: "", email: "", phone: "", range: "", fund: "", message: "" }); }}
-                  style={{ fontSize: 14, fontWeight: 600, color: "#2D5A43", background: "none", border: "none", cursor: "pointer", textDecoration: "underline" }}
+                  style={{ fontSize: 14, fontWeight: 600, color: "#534AB7", background: "none", border: "none", cursor: "pointer", textDecoration: "underline" }}
                 >
                   Run another scenario
                 </button>
@@ -328,11 +328,11 @@ export default function CalculatorPage() {
                     will reach out to discuss your goals and how we can help.
                   </p>
                   {/* Snapshot of their projection */}
-                  <div style={{ background: "#f0f7f3", borderRadius: 12, padding: "16px 20px", marginTop: 20, border: "1px solid #c8e0d4" }}>
+                  <div style={{ background: "#f0effe", borderRadius: 12, padding: "16px 20px", marginTop: 20, border: "1px solid #c8c3f0" }}>
                     <p style={{ fontSize: 13, color: "#555", margin: 0 }}>
-                      Your projection: <strong style={{ color: "#2D5A43" }}>{fmt(principal)}</strong> over{" "}
-                      <strong style={{ color: "#2D5A43" }}>{years} years</strong> →{" "}
-                      <strong style={{ color: "#2D5A43" }}>{fmt(projectedValue)}</strong>
+                      Your projection: <strong style={{ color: "#534AB7" }}>{fmt(principal)}</strong> over{" "}
+                      <strong style={{ color: "#534AB7" }}>{years} years</strong> →{" "}
+                      <strong style={{ color: "#534AB7" }}>{fmt(projectedValue)}</strong>
                       {monthlyPMT > 0 ? ` (+ ${fmt(monthlyPMT)}/mo)` : ""}
                     </p>
                   </div>
@@ -399,8 +399,8 @@ export default function CalculatorPage() {
                             borderRadius: 8,
                             fontSize: 13,
                             fontWeight: 600,
-                            border: form.fund === f ? "2px solid #2D5A43" : "2px solid #e8e8e8",
-                            background: form.fund === f ? "#2D5A43" : "white",
+                            border: form.fund === f ? "2px solid #534AB7" : "2px solid #e8e8e8",
+                            background: form.fund === f ? "#534AB7" : "white",
                             color: form.fund === f ? "white" : "#555",
                             cursor: "pointer",
                           }}
@@ -453,7 +453,7 @@ export default function CalculatorPage() {
 
       {/* CTA if booking not shown */}
       {!showBooking && (
-        <section style={{ background: "linear-gradient(135deg, #2D5A43, #1a3828)", padding: "64px 32px", textAlign: "center", color: "white" }}>
+        <section style={{ background: "linear-gradient(135deg, #534AB7, #3b3494)", padding: "64px 32px", textAlign: "center", color: "white" }}>
           <div style={{ maxWidth: 500, margin: "0 auto" }}>
             <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 12px" }}>Ready to Start Investing?</h2>
             <p style={{ fontSize: 15, color: "rgba(255,255,255,0.65)", lineHeight: 1.7, marginBottom: 28 }}>

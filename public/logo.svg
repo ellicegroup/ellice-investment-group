@@ -1,7 +1,14 @@
-<svg width="250" height="100" viewBox="0 0 250 100" xmlns="http://www.w3.org/2000/svg">
-  <path d="M20 70 V30 H60 M20 50 H50" stroke="#2D5A43" stroke-width="8" fill="none" stroke-linecap="round"/>
-  <path d="M15 65 Q40 60 70 20 L60 20 M70 20 L72 32" stroke="#D4AF37" stroke-width="5" fill="none" stroke-linecap="round"/>
-
-  <text x="85" y="55" font-family="Montserrat, sans-serif" font-weight="700" font-size="32" fill="#2D5A43">ELLICE</text>
-  <text x="85" y="75" font-family="Inter, sans-serif" font-size="10" letter-spacing="3" fill="#1A1A1A">INVESTMENT GROUP</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="220" height="55" aria-label="Ellice Investment Group">
+  <!-- Hex mark -->
+  <g transform="translate(40,40)">
+    <polygon points="0,-36 31,-18 31,18 0,36 -31,18 -31,-18" fill="#534AB7"/>
+    <polygon points="0,-28 24,-14 24,14 0,28 -24,14 -24,-14" fill="none" stroke="white" stroke-width="0.6" opacity="0.25"/>
+    <text x="0" y="7" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="white" letter-spacing="2">EC</text>
+  </g>
+  <!-- ELLICE — dominant -->
+  <text x="84" y="44" font-family="Georgia, serif" font-size="32" font-weight="700" letter-spacing="6" fill="#534AB7">ELLICE</text>
+  <!-- Rule -->
+  <line x1="84" y1="52" x2="310" y2="52" stroke="#534AB7" stroke-width="0.8"/>
+  <!-- Secondary line -->
+  <text x="84" y="66" font-family="Georgia, serif" font-size="11" font-weight="400" letter-spacing="3" fill="#666666">Capital  ·  Investment Group</text>
 </svg>

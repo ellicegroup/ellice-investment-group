@@ -21,7 +21,7 @@ export default function AboutPage() {
 
       {/* Hero */}
       <section style={{
-        background: "linear-gradient(160deg, #0a1628 0%, #0d2236 60%, #0a1e14 100%)",
+        background: "linear-gradient(160deg, #0a0e2a 0%, #1a1650 60%, #0f0c38 100%)",
         padding: "80px 32px 100px",
         textAlign: "center",
         color: "white",
@@ -39,7 +39,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section style={{ padding: "72px 32px", background: "#f5f4f1" }}>
+      <section style={{ padding: "72px 32px", background: "#f5f4f8" }}>
         <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
           <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 16 }}>Our Mission</p>
           <h2 style={{ fontSize: 28, fontWeight: 700, color: "#0a1628", margin: "0 0 20px" }}>
@@ -72,7 +72,7 @@ export default function AboutPage() {
           }}>
             <div style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: 0 }}>
               {/* Left accent bar */}
-              <div style={{ width: 6, background: "linear-gradient(180deg, #D4AF37, #2D5A43)" }} />
+              <div style={{ width: 6, background: "linear-gradient(180deg, #D4AF37, #534AB7)" }} />
               <div style={{ padding: "40px 40px 40px 36px" }}>
                 <div style={{ display: "flex", alignItems: "flex-start", gap: 24, flexWrap: "wrap" }}>
                   {/* Avatar */}
@@ -108,7 +108,7 @@ export default function AboutPage() {
                         Queen&apos;s Young Leader 2016
                       </span>
                     </div>
-                    <p style={{ fontSize: 13, fontWeight: 600, color: "#2D5A43", textTransform: "uppercase", letterSpacing: 1, margin: "0 0 18px" }}>
+                    <p style={{ fontSize: 13, fontWeight: 600, color: "#534AB7", textTransform: "uppercase", letterSpacing: 1, margin: "0 0 18px" }}>
                       Founder &amp; Managing Director
                     </p>
                     <p style={{ fontSize: 15, color: "#444", lineHeight: 1.85, margin: "0 0 16px" }}>
@@ -124,7 +124,7 @@ export default function AboutPage() {
                     </p>
                     <a
                       href="mailto:etekafa@elliceinvestmentgroup.com"
-                      style={{ fontSize: 13, color: "#2D5A43", textDecoration: "none", fontWeight: 600 }}
+                      style={{ fontSize: 13, color: "#534AB7", textDecoration: "none", fontWeight: 600 }}
                     >
                       etekafa@elliceinvestmentgroup.com
                     </a>
@@ -136,7 +136,7 @@ export default function AboutPage() {
 
           {/* Investment Committee */}
           <div style={{
-            background: "#f5f4f1",
+            background: "#f5f4f8",
             borderRadius: 16,
             padding: "32px 36px",
             border: "1px solid #e8e8e8",
@@ -164,7 +164,7 @@ export default function AboutPage() {
                   A dedicated team of investment professionals overseeing portfolio construction, risk management,
                   and quarterly performance reporting across both fund&apos;s holdings.
                 </p>
-                <a href="mailto:support@elliceinvestmentgroup.com" style={{ fontSize: 13, color: "#2D5A43", textDecoration: "none", fontWeight: 600 }}>
+                <a href="mailto:support@elliceinvestmentgroup.com" style={{ fontSize: 13, color: "#534AB7", textDecoration: "none", fontWeight: 600 }}>
                   support@elliceinvestmentgroup.com
                 </a>
               </div>
@@ -174,7 +174,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section style={{ background: "#f5f4f1", padding: "72px 32px" }}>
+      <section style={{ background: "#f5f4f8", padding: "72px 32px" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 52 }}>
             <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 12 }}>History</p>
@@ -192,9 +192,9 @@ export default function AboutPage() {
                   width: 14,
                   height: 14,
                   borderRadius: "50%",
-                  background: "#2D5A43",
-                  border: "3px solid #f5f4f1",
-                  boxShadow: "0 0 0 2px #2D5A43",
+                  background: "#534AB7",
+                  border: "3px solid #f5f4f8",
+                  boxShadow: "0 0 0 2px #534AB7",
                   marginTop: 2,
                   position: "relative",
                   zIndex: 1,

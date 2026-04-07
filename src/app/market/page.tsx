@@ -80,7 +80,7 @@ export default function MarketPage() {
       <PublicNav />
 
       {/* Hero */}
-      <section style={{ background: "linear-gradient(135deg, #0d1b2a, #1b3a5c)", padding: "72px 32px 88px", color: "white" }}>
+      <section style={{ background: "linear-gradient(135deg, #0a0e2a, #1a1650)", padding: "72px 32px 88px", color: "white" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: 20 }}>
           <div>
             <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 3, color: "#D4AF37", marginBottom: 12 }}>Live Market Data</p>
@@ -99,7 +99,7 @@ export default function MarketPage() {
       </section>
 
       {/* Indices grid */}
-      <section style={{ background: "#f8f7f4", padding: "48px 32px" }}>
+      <section style={{ background: "#f5f4f8", padding: "48px 32px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: "#888", marginBottom: 20 }}>Major Indices</p>
           {loading && !data ? (
@@ -120,11 +120,11 @@ export default function MarketPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: "#888", marginBottom: 8 }}>Fund Portfolio</p>
           <h2 style={{ fontSize: 26, fontWeight: 700, color: "#0d1b2a", margin: "0 0 32px" }}>Sector Allocation</h2>
-          <div style={{ background: "#f8f7f4", borderRadius: 20, padding: "32px 36px" }}>
+          <div style={{ background: "#f5f4f8", borderRadius: 20, padding: "32px 36px" }}>
             {[
               { label: "Financials",   pct: 53.2, sub: "BRK.B, JPM, Visa",    color: "#D4AF37" },
-              { label: "Technology",   pct: 30.5, sub: "AAPL, Microsoft",      color: "#2D5A43" },
-              { label: "Energy",       pct: 5.3,  sub: "Exxon Mobil",          color: "#4a8a6a" },
+              { label: "Technology",   pct: 30.5, sub: "AAPL, Microsoft",      color: "#534AB7" },
+              { label: "Energy",       pct: 5.3,  sub: "Exxon Mobil",          color: "#7B74D4" },
               { label: "Fixed Income", pct: 2.5,  sub: "US Treasury 3M",       color: "#aaa"    },
               { label: "Cash & Other", pct: 8.5,  sub: "Cash equivalents",     color: "#ccc"    },
             ].map(({ label, pct, sub, color }) => (
@@ -146,7 +146,7 @@ export default function MarketPage() {
       </section>
 
       {/* Commentary */}
-      <section style={{ background: "#f8f7f4", padding: "64px 32px" }}>
+      <section style={{ background: "#f5f4f8", padding: "64px 32px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: "#888", marginBottom: 8 }}>Insights</p>
           <h2 style={{ fontSize: 26, fontWeight: 700, color: "#0d1b2a", margin: "0 0 32px" }}>Market Commentary</h2>
@@ -166,7 +166,7 @@ export default function MarketPage() {
       </section>
 
       {/* Investor CTA */}
-      <section style={{ background: "linear-gradient(135deg, #0d1b2a, #1b3a5c)", padding: "64px 32px", textAlign: "center", color: "white" }}>
+      <section style={{ background: "linear-gradient(135deg, #0a0e2a, #1a1650)", padding: "64px 32px", textAlign: "center", color: "white" }}>
         <h2 style={{ fontSize: 28, fontWeight: 700, margin: "0 0 14px" }}>View Your Portfolio Performance</h2>
         <p style={{ fontSize: 15, color: "rgba(255,255,255,0.6)", marginBottom: 32 }}>
           Investors can see live portfolio data and their account value in the investor portal.
