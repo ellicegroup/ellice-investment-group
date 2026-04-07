@@ -27,7 +27,7 @@ function formatNum(n: number) {
   return new Intl.NumberFormat("en-NZ").format(Math.round(n));
 }
 
-const AMOUNT_STEPS = [10000, 25000, 50000, 100000, 250000, 500000, 1000000];
+const AMOUNT_STEPS = [5000, 10000, 25000, 50000, 100000, 250000, 500000, 1000000];
 const YEAR_OPTIONS = [3, 5, 10, 15, 20, 25, 30];
 
 const INVESTMENT_RANGES = [
@@ -40,7 +40,7 @@ const INVESTMENT_RANGES = [
 ];
 
 export default function CalculatorPage() {
-  const [principal, setPrincipal] = useState(100000);
+  const [principal, setPrincipal] = useState(10000);
   const [monthlyPMT, setMonthlyPMT] = useState(0);
   const [years, setYears] = useState(10);
   const [showBooking, setShowBooking] = useState(false);
@@ -131,12 +131,12 @@ export default function CalculatorPage() {
                   min={0}
                   max={AMOUNT_STEPS.length - 1}
                   step={1}
-                  value={AMOUNT_STEPS.indexOf(principal) === -1 ? 3 : AMOUNT_STEPS.indexOf(principal)}
+                  value={AMOUNT_STEPS.indexOf(principal) === -1 ? 1 : AMOUNT_STEPS.indexOf(principal)}
                   onChange={(e) => setPrincipal(AMOUNT_STEPS[parseInt(e.target.value)])}
                   style={{ width: "100%", accentColor: "#2D5A43" }}
                 />
                 <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "#aaa", marginTop: 4 }}>
-                  <span>$10K</span><span>$1M</span>
+                  <span>$5K</span><span>$1M</span>
                 </div>
               </div>
 
