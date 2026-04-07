@@ -2,44 +2,24 @@
 
   <!-- Hexagon mark -->
   <g transform="translate(40,40)">
-    <!-- Outer filled hexagon -->
     <polygon points="0,-36 31,-18 31,18 0,36 -31,18 -31,-18" fill="#534AB7"/>
-    <!-- Ghost inner ring -->
     <polygon points="0,-28 24,-14 24,14 0,28 -24,14 -24,-14" fill="none" stroke="white" stroke-width="0.6" opacity="0.25"/>
-    <!-- EC monogram -->
-    <text
-      x="0" y="7"
-      text-anchor="middle"
+    <text x="0" y="7" text-anchor="middle"
       font-family="Georgia, 'Times New Roman', serif"
-      font-size="22"
-      font-weight="700"
-      fill="white"
-      letter-spacing="2"
-    >EC</text>
+      font-size="20" font-weight="700" fill="white" letter-spacing="2">EC</text>
   </g>
 
-  <!-- Wordmark -->
-  <!-- ELLICE — primary dominant wordmark -->
-  <text
-    x="84" y="44"
+  <!-- ELLICE wordmark — bold purple -->
+  <text x="84" y="44"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="32"
-    font-weight="700"
-    letter-spacing="6"
-    fill="#534AB7"
-  >ELLICE</text>
+    font-size="34" font-weight="700" letter-spacing="8" fill="#534AB7">ELLICE</text>
 
-  <!-- Horizontal rule -->
-  <line x1="84" y1="52" x2="310" y2="52" stroke="#534AB7" stroke-width="0.8"/>
+  <!-- Rule — soft purple -->
+  <line x1="84" y1="52" x2="316" y2="52" stroke="#534AB7" stroke-width="0.75" opacity="0.45"/>
 
-  <!-- Capital + Investment Group — secondary line -->
-  <text
-    x="84" y="66"
+  <!-- Subtitle — muted purple -->
+  <text x="85" y="67"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="11"
-    font-weight="400"
-    letter-spacing="3"
-    fill="#666666"
-  >Capital  ·  Investment Group</text>
+    font-size="11" font-weight="400" letter-spacing="3.5" fill="#534AB7" opacity="0.6">Capital  ·  Investment Group</text>
 
 </svg>
