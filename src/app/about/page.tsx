@@ -53,8 +53,79 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Investment Approach */}
+      <section style={{ padding: "72px 32px", background: "#fff" }}>
+        <div style={{ maxWidth: 860, margin: "0 auto" }}>
+
+          {/* Label + heading */}
+          <div style={{ textAlign: "center", marginBottom: 40 }}>
+            <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 16 }}>Investment Philosophy</p>
+            <h2 style={{ fontSize: 28, fontWeight: 700, color: "#13175c", margin: "0 0 20px", lineHeight: 1.25 }}>
+              Capital with Conviction. Patience with Purpose.
+            </h2>
+            <p style={{ fontSize: 16, color: "#555", lineHeight: 1.85, maxWidth: 620, margin: "0 auto" }}>
+              Ellice Capital Group takes a concentrated, thesis-driven approach to long-term wealth creation.
+              Rather than chasing broad diversification, we build focused portfolios around durable structural
+              trends — selecting a small number of high-conviction positions we understand deeply and hold with discipline.
+            </p>
+          </div>
+
+          {/* 2×2 Pillar cards */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 16, marginBottom: 40 }}>
+            {[
+              { title: "Concentrated Positions", body: "We hold fewer names and know each one well. Quality and conviction matter more than quantity." },
+              { title: "Macro-Informed",          body: "Portfolio construction is grounded in global structural themes — energy transitions, technology infrastructure, and emerging market growth." },
+              { title: "Long-Term Horizon",       body: "We invest for multi-year compounding, not short-term movements. Tax discipline and timing are part of the return equation." },
+              { title: "Disciplined Deployment",  body: "Capital is deployed in tranches as conviction builds, with a permanent liquidity reserve maintained at all times." },
+            ].map(({ title, body }) => (
+              <div key={title} style={{
+                background: "white",
+                borderRadius: 14,
+                border: "1px solid #ebebeb",
+                boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
+                padding: "28px 28px 28px 24px",
+                borderTop: "3px solid #534AB7",
+              }}>
+                <h3 style={{ fontSize: 15, fontWeight: 700, color: "#13175c", margin: "0 0 10px" }}>{title}</h3>
+                <p style={{ fontSize: 14, color: "#555", lineHeight: 1.75, margin: 0 }}>{body}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Pull quote — gold left border, matching team card accent bar style */}
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "6px 1fr",
+            gap: 0,
+            background: "white",
+            borderRadius: 14,
+            border: "1px solid #ebebeb",
+            boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
+            overflow: "hidden",
+            marginBottom: 28,
+          }}>
+            <div style={{ background: "linear-gradient(180deg, #D4AF37, #c9a84c)" }} />
+            <div style={{ padding: "28px 32px" }}>
+              <p style={{ fontSize: 16, fontStyle: "italic", color: "#333", lineHeight: 1.85, margin: "0 0 14px" }}>
+                &ldquo;We call our framework Carbon Capital — an approach built on the idea that dense, high-energy
+                positions generate compounding returns over time, just as carbon does in nature.&rdquo;
+              </p>
+              <p style={{ fontSize: 13, fontWeight: 600, color: "#D4AF37", margin: 0, letterSpacing: 0.3 }}>
+                — Easter Tekafa, Founder &amp; Managing Director
+              </p>
+            </div>
+          </div>
+
+          {/* Closing line */}
+          <p style={{ fontSize: 13, color: "#aaa", textAlign: "center", margin: 0, letterSpacing: 0.2 }}>
+            Drawing on institutional experience across private equity, sovereign wealth, and Pacific regional development finance.
+          </p>
+
+        </div>
+      </section>
+
       {/* Managing Director */}
-      <section style={{ padding: "80px 32px" }}>
+      <section style={{ padding: "80px 32px", background: "#f5f4f8" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 52 }}>
             <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2.5, color: "#D4AF37", marginBottom: 12 }}>Leadership</p>
