@@ -70,7 +70,7 @@ export default function DocumentsPage() {
                   href={`/uploads/${doc.filename}`}
                   download={doc.originalName}
                   className="flex-shrink-0 px-4 py-2 rounded-lg text-sm font-semibold text-white transition hover:opacity-90"
-                  style={{ background: "#2D5A43" }}
+                  style={{ background: "#534AB7" }}
                 >
                   ↓ Download
                 </a>

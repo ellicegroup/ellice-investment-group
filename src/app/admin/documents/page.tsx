@@ -84,7 +84,7 @@ export default function AdminDocumentsPage() {
       {toast && (
         <div
           className="fixed top-6 right-6 z-50 px-5 py-3 rounded-xl shadow-lg text-sm font-medium text-white"
-          style={{ background: toast.ok ? "#2D5A43" : "#dc2626" }}
+          style={{ background: toast.ok ? "#534AB7" : "#dc2626" }}
         >
           {toast.msg}
         </div>
@@ -109,7 +109,7 @@ export default function AdminDocumentsPage() {
                 onChange={(e) => setTitle(e.target.value)}
                 required
                 placeholder="e.g. Q1 2026 Fund Report"
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#2D5A43]"
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#534AB7]"
               />
             </div>
             <div>
@@ -120,7 +120,7 @@ export default function AdminDocumentsPage() {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Optional short description"
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#2D5A43]"
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#534AB7]"
               />
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function AdminDocumentsPage() {
               required
               accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.png,.jpg"
               className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:text-white cursor-pointer"
-              style={{ ["--file-bg" as string]: "#2D5A43" }}
+              style={{ ["--file-bg" as string]: "#534AB7" }}
             />
             <p className="text-xs text-gray-400 mt-1">PDF, Word, Excel, CSV or images up to 20 MB</p>
           </div>
@@ -143,7 +143,7 @@ export default function AdminDocumentsPage() {
               type="submit"
               disabled={uploading}
               className="px-6 py-2.5 rounded-lg text-sm font-semibold text-white disabled:opacity-60 transition"
-              style={{ background: "#2D5A43" }}
+              style={{ background: "#534AB7" }}
             >
               {uploading ? "Uploading…" : "↑ Upload Document"}
             </button>
@@ -193,7 +193,7 @@ export default function AdminDocumentsPage() {
                     onClick={() => handleNotify(doc)}
                     disabled={notifying === doc.id}
                     className="px-3 py-1.5 text-xs font-medium rounded-lg text-white transition disabled:opacity-60"
-                    style={{ background: "#2D5A43" }}
+                    style={{ background: "#534AB7" }}
                   >
                     {notifying === doc.id ? "Sending…" : "✉ Notify Investors"}
                   </button>

@@ -59,14 +59,14 @@ export default function AdminOverviewPage() {
               <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style={{ background: "#D4AF37" }}>
                 <span className="text-lg">↑</span>
               </div>
-              <p className="font-semibold text-gray-900 group-hover:text-[#2D5A43] transition">Upload Document</p>
+              <p className="font-semibold text-gray-900 group-hover:text-[#534AB7] transition">Upload Document</p>
               <p className="text-sm text-gray-500 mt-1">Push a document to all investors with optional email notification</p>
             </Link>
             <Link href="/admin/investors" className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition group">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style={{ background: "#2D5A43" }}>
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style={{ background: "#534AB7" }}>
                 <span className="text-lg text-white">◻</span>
               </div>
-              <p className="font-semibold text-gray-900 group-hover:text-[#2D5A43] transition">View Investors</p>
+              <p className="font-semibold text-gray-900 group-hover:text-[#534AB7] transition">View Investors</p>
               <p className="text-sm text-gray-500 mt-1">See all investor accounts, balances, and statement history</p>
             </Link>
           </div>

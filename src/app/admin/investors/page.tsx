@@ -39,7 +39,7 @@ export default function AdminInvestorsPage() {
                   onClick={() => setExpanded(isExpanded ? null : inv.id)}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-semibold text-sm" style={{ background: "#2D5A43" }}>
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-semibold text-sm" style={{ background: "#534AB7" }}>
                       {inv.name[0]}
                     </div>
                     <div>

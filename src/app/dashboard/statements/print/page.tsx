@@ -59,7 +59,7 @@ export default function PrintStatementPage() {
       <div className="no-print" style={{ background: "#f8f7f4", padding: "12px 40px", borderBottom: "1px solid #e5e5e5", display: "flex", alignItems: "center", gap: 16 }}>
         <button
           onClick={() => window.print()}
-          style={{ background: "#2D5A43", color: "white", border: "none", padding: "8px 20px", borderRadius: 6, fontSize: 13, fontWeight: 600, cursor: "pointer" }}
+          style={{ background: "#534AB7", color: "white", border: "none", padding: "8px 20px", borderRadius: 6, fontSize: 13, fontWeight: 600, cursor: "pointer" }}
         >
           ⎙ Save / Print PDF
         </button>
@@ -72,7 +72,7 @@ export default function PrintStatementPage() {
       </div>
 
       {/* Letterhead */}
-      <div style={{ maxWidth: 800, margin: "0 auto", padding: "40px 40px 60px", borderTop: "8px solid #2D5A43" }}>
+      <div style={{ maxWidth: 800, margin: "0 auto", padding: "40px 40px 60px", borderTop: "8px solid #534AB7" }}>
         {/* Header */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 40 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -102,7 +102,7 @@ export default function PrintStatementPage() {
         </div>
 
         {/* Section heading */}
-        <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: "#2D5A43", marginBottom: 16 }}>
+        <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: "#534AB7", marginBottom: 16 }}>
           Account Activity — {statement.period}
         </p>
 
@@ -120,7 +120,7 @@ export default function PrintStatementPage() {
                 <td style={{ padding: "13px 0", textAlign: "right", fontWeight: 500, color: "#1a1a1a" }}>{value}</td>
               </tr>
             ))}
-            <tr style={{ borderTop: "2px solid #2D5A43", background: "#f8f7f4" }}>
+            <tr style={{ borderTop: "2px solid #534AB7", background: "#f8f7f4" }}>
               <td style={{ padding: "14px 12px", fontWeight: 700, color: "#1a1a1a" }}>Closing Balance</td>
               <td style={{ padding: "14px 12px", textAlign: "right", fontWeight: 700, fontSize: 16, color: "#1a1a1a" }}>{fmt(statement.closingBalance)}</td>
             </tr>
@@ -140,7 +140,7 @@ export default function PrintStatementPage() {
         {/* Footer */}
         <div style={{ marginTop: 40, display: "flex", justifyContent: "space-between", fontSize: 12, color: "#888" }}>
           <div>
-            <p style={{ fontWeight: 600, color: "#2D5A43" }}>Ellice Investment Group</p>
+            <p style={{ fontWeight: 600, color: "#534AB7" }}>Ellice Investment Group</p>
             <p>support@elliceinvestmentgroup.com</p>
           </div>
           <div style={{ textAlign: "right" }}>
