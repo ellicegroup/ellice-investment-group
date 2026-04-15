@@ -54,7 +54,7 @@ export default function PublicFooter() {
         {/* Col 2: Navigate */}
         <div>
           <p style={colHead}>Navigate</p>
-          {([["Home", "/"], ["About", "/about"], ["Market", "/market"], ["Calculator", "/calculator"], ["Learn", "/learn"]] as [string, string][]).map(([label, href]) => (
+          {([["Home", "/"], ["About", "/about"], ["Portfolio", "/portfolio"], ["Market", "/market"], ["Calculator", "/calculator"], ["Learn", "/learn"]] as [string, string][]).map(([label, href]) => (
             <Link key={href} href={href} style={linkStyle}>{label}</Link>
           ))}
         </div>
