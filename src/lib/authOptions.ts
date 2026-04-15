@@ -2,6 +2,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import { getInvestorByEmail } from "@/lib/investors";
 import { verifyAdmin } from "@/lib/admin";
+import { fastapiLogin } from "@/lib/fastapiClient";
 import type { NextAuthOptions } from "next-auth";
 
 export const authOptions: NextAuthOptions = {
@@ -15,13 +16,29 @@ export const authOptions: NextAuthOptions = {
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) return null;
 
-        // Check admin first
+        // ── Admin check (always local) ──────────────────────────────────────
         const admin = await verifyAdmin(credentials.email, credentials.password);
         if (admin) {
           return { id: admin.id, name: admin.name, email: admin.email, isAdmin: true } as never;
         }
 
-        // Check investor
+        // ── FastAPI backend (when INVESTOR_API_URL is configured) ───────────
+        if (process.env.INVESTOR_API_URL) {
+          const result = await fastapiLogin(credentials.email, credentials.password);
+          if (result?.access_token) {
+            return {
+              id: result.investor_id ?? result.email,
+              name: result.name,
+              email: result.email ?? credentials.email,
+              apiToken: result.access_token,
+              isAdmin: result.is_admin ?? false,
+            } as never;
+          }
+          // API is configured but login failed — don't fall through to hardcoded
+          return null;
+        }
+
+        // ── Hardcoded fallback (no INVESTOR_API_URL set) ────────────────────
         const investor = getInvestorByEmail(credentials.email);
         if (!investor) return null;
         const valid = await bcrypt.compare(credentials.password, investor.passwordHash);
@@ -42,13 +59,18 @@ export const authOptions: NextAuthOptions = {
       if (user) {
         token.id = user.id;
         token.isAdmin = (user as { isAdmin?: boolean }).isAdmin ?? false;
+        // Store FastAPI JWT so data routes can use it
+        const apiToken = (user as { apiToken?: string }).apiToken;
+        if (apiToken) token.apiToken = apiToken;
       }
       return token;
     },
     async session({ session, token }) {
       if (token && session.user) {
-        (session.user as { id?: string; isAdmin?: boolean }).id = token.id as string;
-        (session.user as { id?: string; isAdmin?: boolean }).isAdmin = token.isAdmin as boolean;
+        const u = session.user as { id?: string; isAdmin?: boolean; apiToken?: string };
+        u.id = token.id as string;
+        u.isAdmin = token.isAdmin as boolean;
+        if (token.apiToken) u.apiToken = token.apiToken as string;
       }
       return session;
     },
