@@ -1,0 +1,8 @@
+<svg viewBox="0 0 72 72" width="144" height="144" xmlns="http://www.w3.org/2000/svg" aria-label="Ellice Capital Mark">
+  <!-- Transparent background — works on any colour -->
+  <g transform="translate(36,36)">
+    <polygon points="0,-32 27.7,-16 27.7,16 0,32 -27.7,16 -27.7,-16" fill="#534AB7"/>
+    <polygon points="0,-23 19.9,-11.5 19.9,11.5 0,23 -19.9,11.5 -19.9,-11.5" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+    <text x="0" y="7" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#EF9F27" letter-spacing="1.5">EC</text>
+  </g>
+</svg>
